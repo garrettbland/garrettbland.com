@@ -1,27 +1,25 @@
 {
-  "name": "garrettbland.com",
-  "version": "0.1.0",
-  "private": true,
-  "prettier": {
-    "semi": false,
-    "trailingComma": "es5",
-    "singleQuote": true,
-    "printWidth": 70,
-    "tabWidth": 4
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "9.3.6",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
-  },
-  "devDependencies": {
-    "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.0.5",
-    "tailwindcss": "^1.4.4"
-  }
+    "name": "garrettbland.com",
+    "version": "0.1.0",
+    "private": true,
+    "prettier": {
+        "semi": false,
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 70,
+        "tabWidth": 4
+    },
+    "scripts": {
+        "start": "npm run dev",
+        "dev": "cross-env ELEVENTY_ENV=dev npx @11ty/eleventy --serve",
+        "build": "cross-env ELEVENTY_ENV=prod npx @11ty/eleventy"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@11ty/eleventy": "^0.11.0",
+        "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+        "cross-env": "^7.0.2",
+        "prettier": "^2.0.5",
+        "tailwindcss": "^1.4.4"
+    }
 }
