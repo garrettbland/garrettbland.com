@@ -12,13 +12,13 @@ pageTitle: Garrett
                 Eagle Radio
             </a>
             in Hays, Kansas. I manage our local news sites, as well as
-                        create client websites. I develop heavily in Javascript,
-                        with an emphasis on React.
+                                                                        create client websites. I develop heavily in Javascript,
+                                                                        with an emphasis on React.
         </p>
         <p class="text-gray-800">
             I'm an inspiring entreprenuer, and love jumping into new
-                        things and learning. I've created a handful of projects
-                        and you can read more about them below.
+                                                                        things and learning. I've created a handful of projects
+                                                                        and you can read more about them below.
         </p>
     </div>
     <div class="mt-6">
@@ -27,7 +27,9 @@ pageTitle: Garrett
         </div>
         <div>
             {% for project in collections.projects %}
-                <a class="text-blue-500 hover:underline" href="{{ project.url }}">{{ project.data.pageTitle }}</a>
+                <div>
+                    <a class="text-blue-500 hover:underline" href="{{ project.url }}">{{ project.data.pageTitle }}</a>
+                </div>
             {% endfor %}
         </div>
     </div>
@@ -35,7 +37,7 @@ pageTitle: Garrett
         <div class="font-bold">
             What is this site made with?
         </div>
-        <div class="text-gray-800">
+        <div class="text-gray-800 mb-4">
             This site is being developed using
             <a class="text-blue-500 hover:underline" href="https://www.11ty.dev/" target="_blank">
                 11ty, a static site generator.
@@ -43,6 +45,11 @@ pageTitle: Garrett
             The site is hosted on
             <a class="text-blue-500 hover:underline" href="https://www.netlify.com/" target="_blank">https://www.netlify.com/</a>, and for styling I am using
             <a class="text-blue-500 hover:underline" href="https://tailwindcss.com/" target="_blank">tailwindcss.</a>
+        </div>
+        <div class="text-gray-800">
+            I use my own site to test out new technologies
+                        frequently. If you notice something is off, its
+                        probably because I broke it. 😊
         </div>
     </div>
 </div>

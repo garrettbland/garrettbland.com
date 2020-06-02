@@ -4,19 +4,20 @@
 
 /* Custom styles */
 article h1 {
-    @apply text-3xl font-semibold;
+    @apply font-bold leading-tight;
+}
+
+article h2,
+h3 {
+    @apply text-base mt-6 font-bold;
 }
 
 article em {
-    @apply text-gray-800;
+    @apply text-gray-800 text-sm;
 }
 
 article p {
-    @apply leading-loose pb-4 pt-2 text-gray-900;
-}
-
-article h3 {
-    @apply text-lg mt-4;
+    @apply text-gray-800 mb-4;
 }
 
 article a {
