@@ -1,4 +1,4 @@
 {
-    "layout": "layout.liquid",
+    "layout": "project.liquid",
     "tags": ["projects"]
 }

@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+article h1 {
+    @apply text-3xl font-semibold;
+}
+
+article em {
+    @apply text-gray-800;
+}
+
+article p {
+    @apply leading-loose pb-4 pt-2 text-gray-900;
+}
+
+article h3 {
+    @apply text-lg mt-4;
+}
+
+article a {
+    @apply text-blue-500;
+}
+
+article a:hover {
+    @apply underline;
+}
+
+article ul {
+    @apply list-disc list-inside my-2;
+}

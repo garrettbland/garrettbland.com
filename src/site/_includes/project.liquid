@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{ pageTitle }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="max-w-xl mx-auto px-4 md:px-0">
+        {% include navbar %}
+        <a href="/" class="mb-4 flex flex-row items-center font-semibold text-sm text-gray-700 hover:underline uppercase">
+            <span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </span>
+            <div>
+                Back to Home 🏡
+            </div>
+        </a>
+        <article>
+            {{ content }}
+        </article>
+    </div>
+    <script src="/assets/main.js"></script>
+</body>
+
+</html>

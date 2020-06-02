@@ -8,20 +8,17 @@ pageTitle: Garrett
         <h1 class="font-bold">Hello! 👋</h1>
         <p class="text-gray-800 mb-4">
             I'm Garrett Bland, a full stack web developer with
-            <a
-                class="text-blue-600 hover:underline"
-                href="https://eagleradio.net"
-            >
+            <a class="text-blue-600 hover:underline" href="https://eagleradio.net">
                 Eagle Radio
             </a>
             in Hays, Kansas. I manage our local news sites, as well as
-            create client websites. I develop heavily in Javascript,
-            with an emphasis on React.
+                        create client websites. I develop heavily in Javascript,
+                        with an emphasis on React.
         </p>
         <p class="text-gray-800">
             I'm an inspiring entreprenuer, and love jumping into new
-            things and learning. I've created a handful of projects
-            and you can read more about them below.
+                        things and learning. I've created a handful of projects
+                        and you can read more about them below.
         </p>
     </div>
     <div class="mt-6">
@@ -30,11 +27,7 @@ pageTitle: Garrett
         </div>
         <div>
             {% for project in collections.projects %}
-            <a
-                class="text-blue-500 hover:underline"
-                href="{{ project.url }}"
-                >{{ project.data.pageTitle }}</a
-            >
+                <a class="text-blue-500 hover:underline" href="{{ project.url }}">{{ project.data.pageTitle }}</a>
             {% endfor %}
         </div>
     </div>
@@ -44,26 +37,12 @@ pageTitle: Garrett
         </div>
         <div class="text-gray-800">
             This site is being developed using
-            <a
-                class="text-blue-500 hover:underline"
-                target="_blank"
-                href="https://www.11ty.dev/"
-            >
+            <a class="text-blue-500 hover:underline" href="https://www.11ty.dev/" target="_blank">
                 11ty, a static site generator.
             </a>
             The site is hosted on
-            <a
-                class="text-blue-500 hover:underline"
-                target="_blank"
-                href="https://www.netlify.com/"
-                >https://www.netlify.com/</a
-            >, and for styling I am using
-            <a
-                class="text-blue-500 hover:underline"
-                target="_blank"
-                href="https://tailwindcss.com/"
-                >tailwindcss.</a
-            >
+            <a class="text-blue-500 hover:underline" href="https://www.netlify.com/" target="_blank">https://www.netlify.com/</a>, and for styling I am using
+            <a class="text-blue-500 hover:underline" href="https://tailwindcss.com/" target="_blank">tailwindcss.</a>
         </div>
     </div>
 </div>
