@@ -35,10 +35,10 @@ article ul {
     @apply list-disc list-inside my-2;
 }
 
-article p code {
+code {
     @apply bg-pink-200 text-red-800 rounded p-px text-sm;
 }
 
-article pre {
+pre {
     @apply rounded-lg shadow-lg;
 }

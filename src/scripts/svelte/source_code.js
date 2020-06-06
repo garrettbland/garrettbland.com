@@ -1,7 +1,5 @@
-<script>
-    import Prism from 'prismjs'
+export const dropdown = `<script>
     import { fade } from 'svelte/transition'
-    import { dropdown } from './source_code'
 
     // dropdown items
     let items = [
@@ -15,14 +13,14 @@
         },
         {
             title: 'Will Svelte take over the web?',
-            description: 'Who knows, its possible.'
+            description: 'Use the right tool for the job is my motto. - Its totally possible. '
         }
     ]
 
-    // set selected index initially
-    let selectedIndex = 0
+    // set initial selected dropdown
+    let selectedIndex = null
 
-    // function to handle expanding item or closing if selected
+    // function to handle expansion or closing
     function handleExpand (index) {
         if(index === selectedIndex) {
             selectedIndex = null
@@ -30,7 +28,6 @@
             selectedIndex = index
         }
     }
-
 </script>
 
 <div class="mb-6">
@@ -39,8 +36,8 @@
             Dropdown Test
         </p>
         <p class="text-gray-800 mb-6">
-            This is a test component to use <code>events</code>, <code>loops</code>, <code>state</code>, built in transitions,
-            and <code>if/else</code> statements with Svelte.
+            This is a test component to use button events, state, built in transitions,
+            and if/else statements with Svelte.
         </p>
     </div>
     <div>
@@ -70,17 +67,4 @@
             </div>
         {/each}
     </div>
-</div>
-
-<div>
-    <div>
-        <p class="text-md font-bold">
-            Source Code
-        </p>
-        <pre class="language-html">
-            <code class="language-html">
-                {dropdown}
-            </code>
-        </pre>
-    </div>
-</div>
+</div>`
