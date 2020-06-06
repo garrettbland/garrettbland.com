@@ -13,7 +13,7 @@ export const dropdown = `<script>
         },
         {
             title: 'Will Svelte take over the web?',
-            description: 'Use the right tool for the job is my motto. - Its totally possible. '
+            description: 'Who knows, its possible.'
         }
     ]
 
