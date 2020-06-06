@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* import prism theme */
+@import './prism.css';
+
 /* Custom styles */
 article h1 {
     @apply font-bold leading-tight;
@@ -30,4 +33,12 @@ article a:hover {
 
 article ul {
     @apply list-disc list-inside my-2;
+}
+
+article p code {
+    @apply bg-pink-200 text-red-800 rounded p-px text-sm;
+}
+
+article pre {
+    @apply rounded-lg shadow-lg;
 }

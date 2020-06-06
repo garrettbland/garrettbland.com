@@ -12,14 +12,26 @@ pageTitle: Garrett
                 Eagle Radio
             </a>
             in Hays, Kansas. I manage our local news sites, as well as
-                                                                        create client websites. I develop heavily in Javascript,
-                                                                        with an emphasis on React.
+                                                                                                                                                                                                                                    create client websites. I develop heavily in Javascript,
+                                                                                                                                                                                                                                    with an emphasis on React.
         </p>
         <p class="text-gray-800">
-            I'm an inspiring entreprenuer, and love jumping into new
-                                                                        things and learning. I've created a handful of projects
-                                                                        and you can read more about them below.
+            I'm an inspiring entreprenuer
+                                                                                    and love jumping into new things and learning.
+                                                                                    I've created a handful of projects, working on a few new ones, and write about development time to time.
         </p>
+    </div>
+    <div class="mt-6">
+        <div class="font-bold">
+            Blog Posts 📝
+        </div>
+        <div>
+            {% for blog in collections.blogs %}
+                <div>
+                    <a class="text-blue-500 hover:underline" href="{{ blog.url }}">{{ blog.data.pageTitle }}</a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
     <div class="mt-6">
         <div class="font-bold">
@@ -45,11 +57,6 @@ pageTitle: Garrett
             The site is hosted on
             <a class="text-blue-500 hover:underline" href="https://www.netlify.com/" target="_blank">https://www.netlify.com/</a>, and for styling I am using
             <a class="text-blue-500 hover:underline" href="https://tailwindcss.com/" target="_blank">tailwindcss.</a>
-        </div>
-        <div class="text-gray-800">
-            I use my own site to test out new technologies
-                        frequently. If you notice something is off, its
-                        probably because I broke it. 😊
         </div>
     </div>
 </div>

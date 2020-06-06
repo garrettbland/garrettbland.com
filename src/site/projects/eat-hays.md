@@ -37,7 +37,7 @@ After building the app, I setup all of the normal social media accounts gearing 
 
 Before I had begun building the app, I missed an extremely crucial step, and that was **_validating the idea_**. I had zero clue if people would like this or would even use it. That didn’t stop my developer fist mind though, I dove right on in and spent 100’s of hours developing before even touching marketing. (Don't do this by the way)
 
-My very close friend created the logo for me and provided tons of feedback. I purchased business cards, flyers, stickers, and other promotional gear. I started running paid Facebook and Twitter advertising, met face to face with every single local restaurant in town (around 40-some) asking them to send me their specials and for permission to put stickers on their front doors. 4 years later, I still see those stickers all over. 😄
+My very close friend created the logo and provided tons of feedback and ideas. I purchased business cards, flyers, stickers, and other promotional gear. I started running paid Facebook and Twitter advertising, met face to face with every single local restaurant in town (around 30-some) asking them to send me their specials and for permission to put stickers on their front doors. 4 years later, I still see those stickers all over. 😄
 
 I even got permission from some owners to setup lighting and purchased a DSLR camera to take _professional_ pictures of food for marketing material as it went out to customers. (They were pretty awful. I was a total newbie but had the confidence of a professional)
 
