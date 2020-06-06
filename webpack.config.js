@@ -2,7 +2,6 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-    // context: __dirname + '/src',
     entry: __dirname + '/src/scripts/main.js',
     output: {
         path: path.resolve(__dirname, 'dist/assets'),
@@ -10,6 +9,16 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.(svelte)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'svelte-loader',
+                    options: {
+                        hotReload: true,
+                    },
+                },
+            },
             {
                 test: /\.css$/,
                 exclude: /node_modules/,

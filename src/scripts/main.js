@@ -1,4 +1,5 @@
 import Prism from 'prismjs'
+import App from './svelte/app.svelte'
 import '../styles/main.css'
 
 /**
@@ -15,3 +16,15 @@ Array.from(code_blocks).forEach(function (element) {
         '\n'
     )
 })
+
+/**
+ * Create new svelte app
+ */
+const app = new App({
+    target: document.getElementById('svelte-test'),
+    props: {
+        color: 'red',
+    },
+})
+
+export default app
