@@ -1,5 +1,7 @@
 import Prism from 'prismjs'
-import App from './svelte/app.svelte'
+import Svelte from './svelte/app.svelte'
+import Vue from 'vue'
+import VueApp from './vue/app.vue'
 import '../styles/main.css'
 
 /**
@@ -20,11 +22,16 @@ Array.from(code_blocks).forEach(function (element) {
 /**
  * Create new svelte app
  */
-const app = new App({
+new Svelte({
     target: document.getElementById('svelte-test'),
     props: {
         color: 'red',
     },
 })
 
-export default app
+/**
+ * Create new vue app
+ */
+new Vue({
+    render: (h) => h(VueApp),
+}).$mount('#vue-test')
