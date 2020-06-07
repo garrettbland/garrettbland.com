@@ -1,14 +1,27 @@
 <template>
     <div>
+        <div class="mb-6 flex flex-row flex-wrap justify-between">
+            <div class="w-full md:w-4/5">
+                <h1 class="text-xl font-bold">
+                    Vue JS Kitchen Sink
+                </h1>
+                <p class="text-gray-800 md:pr-4">
+                    This page is a <a class="text-blue-500 hover:underline" target="_blank" href="https://vuejs.org/">Vue JS</a> app,
+                    and a kitchen sink of random things. This is
+                    using vue 2. Vue 3 is still in pre-alpha, and will test that
+                    out once its ready.
+                </p>
+            </div>
+            <div class="w-full md:w-1/5">
+                <img class="h-24 w-auto" src="https://vuejs.org/images/logo.png" />
+            </div>
+        </div>
         <div class="mb-6">
-            <h1 class="text-xl font-bold">
-                Vue JS Kitchen Sink
-            </h1>
-            <img class="h-24 w-auto mb-6" src="https://vuejs.org/images/logo.png" />
             <p class="text-gray-800 mb-6">
-                This page is a <a class="text-blue-500 hover:underline" target="_blank" href="https://vuejs.org/">Vue JS</a> app, and a kitchen sink of random things. This is
-                using vue 2. Vue 3 is still in pre-alpha, and will test that
-                out once its ready.
+                I've used a ton of Vue js with a handful of client
+                sites are using it in production. Its an absolutely
+                wonderful experience and a lot of elements I prefer
+                over React.
             </p>
             <p class="text-gray-800">
                 This page is using a custom <code>.vue</code> component,
@@ -17,55 +30,34 @@
             </p>
         </div>
         <div class="mb-6">
-            <button class="px-2 py-1 bg-gray-200 hover:bg-gray-300" v-on:click="showAlert">
-                Show Window Alert
-            </button>
+            <Kitchen/>
         </div>
-        <div class="mb-6">
-            <p>
-                Current Count: {{ currentCount }}
-            </p>
-            <button class="px-2 py-1 bg-gray-200 hover:bg-gray-300" v-on:click="currentCount ++">
-                Add To Count
-            </button>
-        </div>
-        <div class="mb-2">
-            <div>
-                First: <span class="font-bold">{{ me.first }}</span>
-            </div>
-            <div>
-                Last: <span class="font-bold">{{ me.last }}</span>
-            </div>
-        </div>
+        <div class="h-px w-full bg-gray-200 mb-6"></div>
+        <p class="text-md font-bold">
+            Source Code
+        </p>
         <div>
-            <div class="mb-2">
-                <label>First Name</label>
-                <input v-model="me.first" class="px-2 py-1 border border-gray-300" placeholder="First Name"/>
-            </div>
-            <div>
-                <label>Last Name</label>
-                <input v-model="me.last" class="px-2 py-1 border border-gray-300" placeholder="Last Name"/>
-            </div>
+            <pre class="language-html">
+                <code class="language-html">
+                    {{ source_code }}
+                </code>
+            </pre>
         </div>
     </div>
 </template>
 
 <script>
+    import Kitchen from './kitchen.vue'
+    import { kitchen } from './source_code'
     export default {
-        name: 'main-app',
+        name: 'vue-app',
         data () {
             return {
-                me: {
-                    first: 'Garrett',
-                    last: 'Bland'
-                },
-                currentCount: 0
+                source_code: kitchen
             }
         },
-        methods: {
-            showAlert() {
-                alert('Show alert from vue')
-            }
+        components: {
+            Kitchen
         }
     }
 </script>
