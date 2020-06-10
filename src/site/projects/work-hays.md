@@ -25,7 +25,7 @@ My wife is a manager in Human Resources in the area, and often talked about the 
 -   Clunky backend to for employers to manage jobs
 -   Key missing features like ability to simply renew a job
 
-Myself, being an inspiring entrepreneur, finally saw this as an opportunity. I had the knowledge to build something like this, and was completely achievable. Only problem, was that the current jobs site was used by everyone and had a well known name in our community.
+Myself, being an inspiring entrepreneur, and my business partner finally saw this opportunity. We had the knowledge to build something like this, and was completely achievable. Only problem, was that the current jobs site was used by everyone and had a well known name in our community.
 
 ### Idea Validation
 
@@ -33,13 +33,13 @@ I’ve read many books, listened to tons of podcasts, read many articles and lur
 
 ### Actually Validating the Idea
 
-The first thing I did was look at the current jobs site, and I found that they had an employee directory. A decent amount of businesses had their emails listed. The source code was super wonky, so unfortunately I couldn't use any scraping tools. I just had to roll up my sleeves and do it manually by copying the emails and contact info into a spreadsheet.
+The first thing we did was look at the current jobs site, and I found that they had an employee directory. A decent amount of businesses had their emails listed. The source code was super wonky, so unfortunately I couldn't use any scraping tools. I just had to roll up my sleeves and do it manually by copying the emails and contact info into a spreadsheet.
 
-Next I sent out an email (in multiple waves so it wouldn’t come across as spam) from my personal email account, telling them my idea to create a new jobs site, and asking if they would be interested in posting their jobs to our site as well.
+Next we sent out an email (in multiple waves so it wouldn’t come across as spam) from a personal email account, telling them our idea to create a new jobs site, and asking if they would be interested in posting their jobs to our site as well.
 
-The next day, I started getting tons of replies saying they would. I have started countless app ideas and websites in the past, without doing any sort of validation (and just diving right into code), so this was a huge win for me and my confidence.
+The next day, we started getting tons of replies saying they would. I have started countless app ideas and websites in the past, without doing any sort of validation (and just diving right into code), so this was a huge win for me and my confidence.
 
-A few days later and many yes’s, I received an email from the current organization who ran the former jobs site, saying they would like to actually hand the keys over to us. This was very unexpected, but amazing news. My business partner and I worked closely with the organization during the transition, and it was a wonderful experience.
+A few days later and many yes’s, we received an email from the current organization who ran the former jobs site, saying they would like to actually hand the keys over to us. This was very unexpected, but amazing news. My business partner and I worked closely with the organization during the transition, and it was a wonderful experience.
 
 ### Enough business, get to the tech stuff
 
@@ -60,7 +60,7 @@ We felt these things were a priority to gain traffic and keep the employers post
 -   [MySQL](https://www.mysql.com/) - Relational database
 -   Others such as postcss, webpack, babel, moment, ect
 
-We also used other services such as GitHub for code management, Mailgun for automated emails, and Digital Ocean for the simplicity for our web hosting. We use cloud flare for our content delivery network and for potential DDoS attacks.
+We also used other services such as GitHub for code management, Mailgun for automated emails, and Digital Ocean for the simplicity for our web hosting. We use cloudflare for our content delivery network and for potential DDoS attacks.
 
 ### Key features I’ll brag out because I’m proud
 
