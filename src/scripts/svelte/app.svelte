@@ -18,7 +18,7 @@
     <p class="mb-6 border-b-1 border-gray-500 text-gray-800">
         I've added Svelte into this website and this is currently
         the only page using it. I have a few demos below and some
-        code examples.
+        code examples as I experiment myself.
     </p>
     <div class="h-px w-full bg-gray-200 mb-6"></div>
     <Dropdown/>
