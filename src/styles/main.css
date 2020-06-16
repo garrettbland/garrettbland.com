@@ -42,3 +42,7 @@ code {
 pre {
     @apply rounded-lg shadow-lg;
 }
+
+article ol {
+    @apply list-decimal list-inside my-2;
+}
