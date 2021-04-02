@@ -154,11 +154,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'postcss-loader',
-                ],
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
             },
         ],
     },
@@ -217,9 +213,7 @@ Perfect! Now lets go into our `index.liquid` file and add in some additional htm
     <body>
         <div>
             <h1 class="text-4xl font-black">Eleventy Kit</h1>
-            <p class="text-lg text-gray-700 underline">
-                An eleventy starter kit
-            </p>
+            <p class="text-lg text-gray-700 underline">An eleventy starter kit</p>
         </div>
         <!-- JS file built by webpack-->
         <script src="/assets/main.js"></script>

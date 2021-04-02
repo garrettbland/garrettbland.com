@@ -1,5 +1,6 @@
 ---
 pageTitle: Sell Hays
+type: 'project'
 ---
 
 # Sell Hays

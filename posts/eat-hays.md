@@ -1,5 +1,6 @@
 ---
 pageTitle: Eat Hays
+type: 'project'
 ---
 
 # Eat Hays

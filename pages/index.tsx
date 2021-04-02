@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Layout from '../components/Layout'
+import matter from 'gray-matter'
 
-const Home = () => {
+const Home = ({ posts, projects }) => {
     return (
         <Layout>
             <div className="mt-6">
@@ -34,23 +35,41 @@ const Home = () => {
                 </div>
                 <div className="mt-6">
                     <div className="font-bold">Blog Posts 📝</div>
-                    <div>
-                        {/* {% for blog in collections.blogs %}
-                <div>
-                    <a className="text-blue-500 hover:underline" href="{{ blog.url }}">{{ blog.data.pageTitle }}</a>
-                </div>
-            {% endfor %} */}
-                    </div>
+                    <ul>
+                        {posts &&
+                            posts.map((post) => {
+                                if (!post.frontmatter.type) {
+                                    return (
+                                        <li key={post.slug}>
+                                            <Link href={{ pathname: `/post/${post.slug}` }}>
+                                                <a className="text-blue-500 hover:underline">
+                                                    {post.frontmatter.pageTitle}
+                                                </a>
+                                            </Link>
+                                        </li>
+                                    )
+                                }
+                            })}
+                    </ul>
                 </div>
                 <div className="mt-6">
                     <div className="font-bold">My Projects 📦</div>
-                    <div>
-                        {/* {% for project in collections.projects %}
-                <div>
-                    <a className="text-blue-500 hover:underline" href="{{ project.url }}">{{ project.data.pageTitle }}</a>
-                </div>
-            {% endfor %} */}
-                    </div>
+                    <ul>
+                        {posts &&
+                            posts.map((project) => {
+                                if (project.frontmatter.type === 'project') {
+                                    return (
+                                        <li key={project.slug}>
+                                            <Link href={{ pathname: `/post/${project.slug}` }}>
+                                                <a className="text-blue-500 hover:underline">
+                                                    {project.frontmatter.pageTitle}
+                                                </a>
+                                            </Link>
+                                        </li>
+                                    )
+                                }
+                            })}
+                    </ul>
                 </div>
                 <div className="mt-6">
                     <div className="font-bold">What is this site made with?</div>
@@ -90,6 +109,31 @@ const Home = () => {
             </div>
         </Layout>
     )
+}
+
+export async function getStaticProps() {
+    const posts = ((context) => {
+        const keys = context.keys()
+        const values = keys.map(context)
+
+        const data = keys.map((key, index) => {
+            let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
+            const value = values[index]
+            const document = matter(value.default)
+            return {
+                frontmatter: document.data,
+                markdownBody: document.content,
+                slug,
+            }
+        })
+        return data
+    })(require.context('../posts', true, /\.md$/))
+
+    return {
+        props: {
+            posts,
+        },
+    }
 }
 
 export default Home

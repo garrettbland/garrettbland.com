@@ -1,5 +1,6 @@
 ---
 pageTitle: Track My Pain
+type: 'project'
 ---
 
 # Track My Pain

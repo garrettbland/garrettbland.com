@@ -1,5 +1,6 @@
 ---
 pageTitle: Bunny Runner
+type: 'project'
 ---
 
 # Bunny Runner

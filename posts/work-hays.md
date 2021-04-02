@@ -1,5 +1,6 @@
 ---
 pageTitle: Work Hays
+type: 'project'
 ---
 
 # Work Hays
