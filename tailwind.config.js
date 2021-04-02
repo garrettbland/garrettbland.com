@@ -1,11 +1,17 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
-    purge: ['./src/site/**/*.liquid'],
+    purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+    darkMode: false, // or 'media' or 'class'
     theme: {
-        rotate: {
-            '25': '25deg',
+        extend: {
+            rotate: {
+                25: '25deg',
+            },
+            colors: {
+                ...colors,
+            },
         },
-        extend: {},
     },
-    variants: {},
     plugins: [],
 }

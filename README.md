@@ -1,11 +1,3 @@
-# Garrett Bland
+# garrettbland.com
 
-This is my personal website
-
-## Getting Started
-
-Run the development server: Must have Netlify Dev CLI
-
-```bash
-netlify dev
-```
+> My personal blog (https://garrettbland.com)
