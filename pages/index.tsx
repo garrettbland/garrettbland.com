@@ -116,6 +116,11 @@ export async function getStaticProps() {
         const keys = context.keys()
         const values = keys.map(context)
 
+        /**
+         * There has to be a better way to do this. Function
+         * matter throws a fit about default not being part of
+         * unkown from const value.
+         */
         interface ValueType {
             default: string
         }
