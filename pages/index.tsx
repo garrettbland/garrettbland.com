@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Layout from '../components/Layout'
 import matter from 'gray-matter'
 
-const Home = ({ posts, projects }) => {
+const Home = ({ posts }) => {
     return (
         <Layout>
             <div className="mt-6">

@@ -36,14 +36,18 @@ article ul {
     @apply list-disc list-inside my-2;
 }
 
-code {
+article ol {
+    @apply list-decimal list-inside my-2;
+}
+
+article img {
+    @apply shadow-lg my-6 rounded-lg overflow-hidden;
+}
+
+p > code {
     @apply bg-pink-200 text-red-800 rounded p-px text-sm;
 }
 
-pre {
+p > pre {
     @apply rounded-lg shadow-lg;
-}
-
-article ol {
-    @apply list-decimal list-inside my-2;
 }

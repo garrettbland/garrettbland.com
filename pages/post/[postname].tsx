@@ -1,9 +1,15 @@
+import { useEffect } from 'react'
 import Link from 'next/link'
 import Layout from '../../components/Layout'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
+import prism from 'prismjs'
 
 const BlogPost = ({ frontmatter, markdownBody }: { frontmatter: any; markdownBody: string }) => {
+    useEffect(() => {
+        prism.highlightAll()
+    })
+
     if (!frontmatter) return <></>
     return (
         <Layout>

@@ -1,27 +1,26 @@
-/* PrismJS 1.20.0
-https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript&plugins=line-numbers */
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript&plugins=show-language+highlight-keywords */
 /**
- * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
- * Based on https://github.com/chriskempson/tomorrow-theme
- * @author Rose Pritchard
+ * Cobalt2 theme for JavaScript, CSS, HTML, Markdown, JSON, YAML, and SCSS
+ * @author wesbos
+ * Works best when "Show Language" and "Highlight Keywords" plugins are included
  */
 
 code[class*='language-'],
 pre[class*='language-'] {
-    color: #ccc;
-    background: none;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    font-size: 1em;
+    color: #f8f8f2;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    font-family: 'Fira Code', monospace;
+    direction: ltr;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
-    line-height: 1.5;
+    line-height: 1.35;
 
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
 
     -webkit-hyphens: none;
     -moz-hyphens: none;
@@ -34,11 +33,19 @@ pre[class*='language-'] {
     padding: 1em;
     margin: 0.5em 0;
     overflow: auto;
+    border-radius: 0;
+    border: 0;
 }
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-    background: #2d2d2d;
+    background: #223545;
+    border-radius: 0.5em;
+    --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+        var(--tw-shadow);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 /* Inline code */
@@ -48,116 +55,212 @@ pre[class*='language-'] {
     white-space: normal;
 }
 
+/* Language before */
+.prism-show-language {
+    background: #1f4662;
+    border-top: 2px solid #ffc600;
+    text-align: right;
+    padding: 5px;
+    color: white;
+    font-size: 11px;
+}
+.prism-show-language + pre {
+    margin-top: 0;
+}
+
 .token.comment,
-.token.block-comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #999;
+    color: #0088ff;
+}
+
+.token.comment,
+.token.italic {
+    font-style: italic;
 }
 
 .token.punctuation {
-    color: #ccc;
+    color: #f8f8f2;
 }
 
-.token.tag,
-.token.attr-name,
-.token.namespace,
-.token.deleted {
-    color: #e2777a;
-}
-
-.token.function-name {
-    color: #6196cc;
-}
-
-.token.boolean,
-.token.number,
-.token.function {
-    color: #f08d49;
+.namespace {
+    opacity: 0.7;
 }
 
 .token.property,
-.token.class-name,
+.token.tag,
 .token.constant,
-.token.symbol {
-    color: #f8c555;
+.token.symbol,
+.token.deleted {
+    color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+    color: #ff628c;
 }
 
 .token.selector,
-.token.important,
-.token.atrule,
-.token.keyword,
-.token.builtin {
-    color: #cc99cd;
-}
-
+.token.attr-name,
 .token.string,
 .token.char,
-.token.attr-value,
-.token.regex,
-.token.variable {
-    color: #7ec699;
+.token.builtin,
+.token.inserted {
+    color: #3ad900;
 }
 
 .token.operator,
 .token.entity,
-.token.url {
-    color: #67cdcc;
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value {
+    color: #ffc600;
+}
+
+.token.keyword.keyword-function {
+    color: #ffa5f3;
+    background: #1d3c52;
+    padding: 4px 2px;
+}
+
+.token.keyword {
+    color: #ff9d00;
+}
+
+.token.operator {
+    color: #ff9d00;
+}
+
+.token.function {
+    color: #ffc600;
+}
+
+.token.keyword.keyword-const,
+.token.keyword.keyword-var,
+.token.keyword.keyword-let {
+    color: #ffc600;
+}
+
+.token.regex,
+.token.important {
+    color: #fd971f;
 }
 
 .token.important,
 .token.bold {
     font-weight: bold;
 }
-.token.italic {
-    font-style: italic;
-}
 
 .token.entity {
     cursor: help;
 }
 
-.token.inserted {
-    color: green;
+/* CSS requires Prism: CSS, CSS-Extras */
+
+code.language-css,
+.token.hexcode,
+.language-css .token.boolean,
+.language-css .token.number {
+    color: #edf080;
 }
 
-pre[class*='language-'].line-numbers {
-    position: relative;
-    padding-left: 3.8em;
-    counter-reset: linenumber;
+.language-css .token.selector {
+    color: #9effff;
 }
 
-pre[class*='language-'].line-numbers > code {
-    position: relative;
-    white-space: inherit;
+.language-css .token.class,
+.language-css .token.selector .token.class,
+.language-css .token.attribute {
+    color: #3ad900;
 }
 
-.line-numbers .line-numbers-rows {
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    font-size: 100%;
-    left: -3.8em;
-    width: 3em; /* works for line-numbers below 1000 lines */
-    letter-spacing: -1px;
-    border-right: 1px solid #999;
-
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.language-css .token.property {
+    color: #9df39f;
 }
 
-.line-numbers-rows > span {
-    display: block;
-    counter-increment: linenumber;
+.token.pseudo-class {
+    color: #ff9a1a;
 }
 
-.line-numbers-rows > span:before {
-    content: counter(linenumber);
-    color: #999;
-    display: block;
-    padding-right: 0.8em;
-    text-align: right;
+/* HTML Markup */
+
+.language-markup .token.tag,
+.token.doctype {
+    color: #9effff;
+}
+
+.language-markup .attr-name {
+    color: #ffc600;
+    font-style: italic;
+}
+.language-markup .attr-value {
+    color: #3ad900;
+}
+
+/* Markdown */
+
+.language-markdown .title {
+    background: #000;
+    color: #fdc500;
+}
+
+.language-markdown .url {
+    color: #3ad900;
+}
+
+.language-markdown .list.punctuation {
+    color: #ff9a1a;
+}
+
+/* JSON */
+
+.language-json .property {
+    color: #3ad900;
+}
+
+.language-json .operator {
+    color: #f8f8f2;
+}
+
+/* YAML */
+
+code.language-yaml {
+    color: #3ad900;
+}
+
+.language-yaml .boolean {
+    color: #f85b79;
+}
+
+/* SCSS */
+
+code.language-scss {
+    color: #e68885;
+}
+
+.language-scss .property {
+    color: #80ffbb;
+}
+
+.language-scss .keyword {
+    color: #ff9a1a;
+}
+
+.language-scss .token.variable {
+    color: #ccc;
+}
+
+.language-scss .hexcode {
+    color: #f85b79;
+}
+
+.language-scss .function {
+    color: #fff;
 }
