@@ -116,10 +116,16 @@ export async function getStaticProps() {
         const keys = context.keys()
         const values = keys.map(context)
 
+        interface ValueType {
+            default: string
+        }
+
         const data = keys.map((key, index) => {
             let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
-            const value = values[index]
-            const document = matter(value.default)
+            const value: ValueType = values[index]['default']
+            const document = matter<any, any>({
+                content: value,
+            })
             return {
                 frontmatter: document.data,
                 markdownBody: document.content,
