@@ -5,8 +5,7 @@ published: June 5, 2020
 
 When I started really getting into javascript and adding more functionality to my sites, something I really struggled with, was webpack. Below I have outlined my simple webpack setup, and hopefully this can help you.
 
-<a href="https://github.com/garrettbland/simple-webpack-setup
-" target="_blank">Github Repo</a>
+[https://github.com/garrettbland/simple-webpack-setup](Github Repo)
 
 ### What is webpack?
 
