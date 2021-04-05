@@ -1,10 +1,7 @@
 ---
-pageTitle: Setting up Tailwind CSS with Webpack and Purge CSS
+title: Setting up Tailwind CSS with Webpack and Purge CSS
+published: June 21, 2020
 ---
-
-# Setting up Tailwind CSS with Webpack & Purge CSS
-
-Published June 21st, 2020
 
 A few years ago when I found out about this css utility called [Tailwind CSS](https://tailwindcss.com/), I was absolutely blown away with how much time it saved me and how quickly it made me wire up websites with CSS. It made designing fun again.
 

@@ -1,10 +1,7 @@
 ---
-pageTitle: My Simple Webpack Setup
+title: My Simple Webpack Setup
+published: June 5, 2020
 ---
-
-# My simple webpack setup
-
-_Published June 5, 2020_
 
 When I started really getting into javascript and adding more functionality to my sites, something I really struggled with, was webpack. Below I have outlined my simple webpack setup, and hopefully this can help you.
 

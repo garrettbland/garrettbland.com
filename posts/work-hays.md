@@ -1,11 +1,8 @@
 ---
-pageTitle: Work Hays
+title: Work Hays
+published: May 16, 2020
 type: 'project'
 ---
-
-# Work Hays
-
-_Published May 16, 2020 - Updated May 31, 2020_
 
 [https://workhays.com](https://workhays.com/)
 

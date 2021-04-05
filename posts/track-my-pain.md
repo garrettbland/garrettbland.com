@@ -1,11 +1,8 @@
 ---
-pageTitle: Track My Pain
+title: Track My Pain
+published: May 31, 2020
 type: 'project'
 ---
-
-# Track My Pain
-
-_Published May 31, 2020_
 
 [https://github.com/garrettbland/TrackMyPain](https://github.com/garrettbland/TrackMyPain)
 

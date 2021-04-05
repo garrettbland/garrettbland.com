@@ -1,11 +1,8 @@
 ---
-pageTitle: Eat Hays
+title: Eat Hays
+published: May 16, 2020
 type: 'project'
 ---
-
-# Eat Hays
-
-_Published May 16, 2020 - Updated May 31, 2020_
 
 [https://github.com/garrettbland/EatHays](https://github.com/garrettbland/EatHays)
 

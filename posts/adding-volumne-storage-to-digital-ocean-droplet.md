@@ -1,10 +1,7 @@
 ---
-pageTitle: Adding Volume Storage to Digital Ocean Droplet
+title: Adding Volume Storage to Digital Ocean Droplet
+published: June 11, 2020
 ---
-
-# Adding Volume Storage to Digital Ocean Droplet
-
-_Published June 11, 2020_
 
 I use Digital Ocean for all of my server side projects. Lately I have been having some random issues start to pop up, and the culprit has always been disk space filling up.
 

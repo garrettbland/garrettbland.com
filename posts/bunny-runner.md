@@ -1,11 +1,8 @@
 ---
-pageTitle: Bunny Runner
+title: Bunny Runner
+published: May 31, 2020
 type: 'project'
 ---
-
-# Bunny Runner
-
-_Published May 31, 2020_
 
 [https://www.facebook.com/BunnyRunnerApp](https://www.facebook.com/BunnyRunnerApp)
 

@@ -1,10 +1,7 @@
 ---
-pageTitle: Creating a static website template
+title: Creating a static website template
+published: July 29, 2020
 ---
-
-# Creating a static website template
-
-_Published Wednesday, July 29, 2020_
 
 Github Repo - [https://github.com/garrettbland/eleventykit](https://github.com/garrettbland/eleventykit)
 

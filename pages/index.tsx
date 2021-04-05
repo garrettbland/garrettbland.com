@@ -43,7 +43,7 @@ const Home = ({ posts }) => {
                                         <li key={post.slug}>
                                             <Link href={{ pathname: `/post/${post.slug}` }}>
                                                 <a className="text-blue-500 hover:underline">
-                                                    {post.frontmatter.pageTitle}
+                                                    {post.frontmatter.title}
                                                 </a>
                                             </Link>
                                         </li>
@@ -62,7 +62,7 @@ const Home = ({ posts }) => {
                                         <li key={project.slug}>
                                             <Link href={{ pathname: `/post/${project.slug}` }}>
                                                 <a className="text-blue-500 hover:underline">
-                                                    {project.frontmatter.pageTitle}
+                                                    {project.frontmatter.title}
                                                 </a>
                                             </Link>
                                         </li>

@@ -1,11 +1,8 @@
 ---
-pageTitle: Sell Hays
+title: Sell Hays
+published: May 31, 2020
 type: 'project'
 ---
-
-# Sell Hays
-
-_Published May 31, 2020_
 
 [https://github.com/garrettbland/sellhays](https://github.com/garrettbland/sellhays)
 

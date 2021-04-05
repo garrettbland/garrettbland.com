@@ -1,10 +1,7 @@
 ---
-pageTitle: Starting a site review tool
+title: Starting a site review tool
+published: July 12, 2020
 ---
-
-# Site Review Tool
-
-_Published Sunday, July 12, 2020_
 
 Github Repo: [https://github.com/garrettbland/site-review-tool](https://github.com/garrettbland/site-review-tool)
 
