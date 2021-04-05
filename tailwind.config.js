@@ -11,6 +11,10 @@ module.exports = {
             colors: {
                 ...colors,
             },
+            fontFamily: {
+                sans: ['"Inter"'],
+                mono: ['"Fira Code"'],
+            },
         },
     },
     plugins: [],
