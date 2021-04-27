@@ -3,6 +3,8 @@ title: Adding Volume Storage to Digital Ocean Droplet
 published: June 11, 2020
 ---
 
+# Adding Volume Storage to Digital Ocean Droplet
+
 I use Digital Ocean for all of my server side projects. Lately I have been having some random issues start to pop up, and the culprit has always been disk space filling up.
 
 Digital Ocean offers Volume storage you can attach to your droplets, so you can add more space without upgrading RAM and CPU. Its like adding a USB to a computer. Here are my steps to troubleshoot and add volume storage. **Note that I'm not a server guy, I could be wildly wrong, but it works for me.**

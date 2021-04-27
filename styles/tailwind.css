@@ -7,47 +7,6 @@
 /* import prism theme */
 @import './prism.css';
 
-article h1 {
-    @apply font-bold leading-tight;
-}
-
-article h2,
-h3 {
-    @apply text-base mt-6 font-bold;
-}
-
-article em {
-    @apply text-gray-800 text-sm;
-}
-
-article p {
-    @apply text-gray-800 mb-4;
-}
-
-article a {
-    @apply text-blue-500;
-}
-
-article a:hover {
-    @apply underline;
-}
-
-article ul {
-    @apply list-disc list-inside my-2;
-}
-
-article ol {
-    @apply list-decimal list-inside my-2;
-}
-
-article img {
-    @apply shadow-lg my-6 rounded-lg overflow-hidden;
-}
-
 p > code {
     @apply bg-pink-200 text-red-800 rounded p-px text-sm;
-}
-
-p > pre {
-    @apply rounded-lg shadow-lg;
 }

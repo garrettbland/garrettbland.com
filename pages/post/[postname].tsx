@@ -18,10 +18,8 @@ const BlogPost = ({ frontmatter, markdownBody }: { frontmatter: any; markdownBod
                     Back to post list
                 </a>
             </Link>
-            <h1 className="text-3xl font-bold">{frontmatter.title}</h1>
             <p className="text-gray-700">Published {frontmatter.published}</p>
-            <div className="h-px w-full bg-gray-200 my-12"></div>
-            <article id="article">
+            <article id="article" className="prose prose-blue">
                 <ReactMarkdown source={markdownBody} />
             </article>
         </Layout>

@@ -5,15 +5,15 @@ import matter from 'gray-matter'
 const Home = ({ posts }) => {
     return (
         <Layout>
-            <div className="mt-6">
+            <div className="mt-6 prose prose-blue">
                 <div>
                     <img
-                        className="h-32 w-32 object-cover object-center rounded-lg mb-6 shadow-lg "
+                        className="h-32 w-32 object-cover object-center rounded-lg mb-6 shadow-lg"
                         alt="Garrett Bland"
                         src="/images/garrett-bland-headshot.jpg"
                     />
-                    <h1 className="font-bold">Hello! 👋</h1>
-                    <p className="text-gray-800 mb-4">
+                    <h1>Hello! 👋</h1>
+                    <p>
                         I'm Garrett Bland, a full stack web developer with{' '}
                         <Link href="https://eagleradio.net" prefetch={false}>
                             <a
@@ -27,14 +27,14 @@ const Home = ({ posts }) => {
                         in Hays, Kansas. I manage our local news sites, as well as create client
                         websites. I develop heavily in Javascript, with an emphasis on React.
                     </p>
-                    <p className="text-gray-800">
+                    <p>
                         I'm an inspiring entreprenuer and love jumping into new things and learning.
                         I've created a handful of projects, working on a few new ones, and write
                         about development from time to time.
                     </p>
                 </div>
-                <div className="mt-6">
-                    <div className="font-bold">Blog Posts 📝</div>
+                <div>
+                    <h3>Blog Posts 📝</h3>
                     <ul>
                         {posts &&
                             posts.map((post) => {
@@ -42,9 +42,7 @@ const Home = ({ posts }) => {
                                     return (
                                         <li key={post.slug}>
                                             <Link href={{ pathname: `/post/${post.slug}` }}>
-                                                <a className="text-blue-500 hover:underline">
-                                                    {post.frontmatter.title}
-                                                </a>
+                                                <a>{post.frontmatter.title}</a>
                                             </Link>
                                         </li>
                                     )
@@ -52,8 +50,8 @@ const Home = ({ posts }) => {
                             })}
                     </ul>
                 </div>
-                <div className="mt-6">
-                    <div className="font-bold">My Projects 📦</div>
+                <div>
+                    <h3>My Projects 📦</h3>
                     <ul>
                         {posts &&
                             posts.map((project) => {
@@ -61,9 +59,7 @@ const Home = ({ posts }) => {
                                     return (
                                         <li key={project.slug}>
                                             <Link href={{ pathname: `/post/${project.slug}` }}>
-                                                <a className="text-blue-500 hover:underline">
-                                                    {project.frontmatter.title}
-                                                </a>
+                                                <a>{project.frontmatter.title}</a>
                                             </Link>
                                         </li>
                                     )
@@ -71,40 +67,28 @@ const Home = ({ posts }) => {
                             })}
                     </ul>
                 </div>
-                <div className="mt-6">
-                    <div className="font-bold">What is this site made with?</div>
-                    <div className="text-gray-800 mb-4">
+                <div>
+                    <h3>What is this site made with?</h3>
+                    <p>
                         This site is being developed using{' '}
                         <Link href="https://nextjs.org/" prefetch={false}>
-                            <a
-                                className="text-blue-500 hover:underline"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
+                            <a target="_blank" rel="noreferrer">
                                 Next.js
                             </a>
                         </Link>{' '}
                         The site is hosted on{' '}
                         <Link href="https://www.netlify.com/">
-                            <a
-                                className="text-blue-500 hover:underline"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
+                            <a target="_blank" rel="noreferrer">
                                 Netlify
                             </a>
                         </Link>
                         , and for styling I am using{' '}
                         <Link href="https://tailwindcss.com/">
-                            <a
-                                className="text-blue-500 hover:underline"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
+                            <a target="_blank" rel="noreferrer">
                                 Tailwind CSS.
                             </a>
                         </Link>
-                    </div>
+                    </p>
                 </div>
             </div>
         </Layout>
