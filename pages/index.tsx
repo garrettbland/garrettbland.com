@@ -56,13 +56,17 @@ const Home = ({ posts }) => {
                         {posts &&
                             posts.map((project) => {
                                 if (project.frontmatter.type === 'project') {
-                                    return (
-                                        <li key={project.slug}>
-                                            <Link href={{ pathname: `/post/${project.slug}` }}>
-                                                <a>{project.frontmatter.title}</a>
-                                            </Link>
-                                        </li>
-                                    )
+                                    if (project.frontmatter.pending) {
+                                        return null
+                                    } else {
+                                        return (
+                                            <li key={project.slug}>
+                                                <Link href={{ pathname: `/post/${project.slug}` }}>
+                                                    <a>{project.frontmatter.title}</a>
+                                                </Link>
+                                            </li>
+                                        )
+                                    }
                                 }
                             })}
                     </ul>

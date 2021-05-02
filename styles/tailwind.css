@@ -6,7 +6,3 @@
 
 /* import prism theme */
 @import './prism.css';
-
-p > code {
-    @apply bg-pink-200 text-red-800 rounded p-px text-sm;
-}
