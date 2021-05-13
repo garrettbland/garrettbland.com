@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import Layout from '../components/Layout'
-import matter from 'gray-matter'
+// import matter from 'gray-matter'
 
 const Home = ({ posts }) => {
+    return <div>Home</div>
     return (
         <Layout>
             <div className="mt-6 prose prose-blue">
@@ -99,35 +100,35 @@ const Home = ({ posts }) => {
     )
 }
 
-export async function getStaticProps() {
-    const posts = ((context) => {
-        const keys = context.keys()
-        const values = keys.map(context)
+// export async function getStaticProps() {
+//     const posts = ((context) => {
+//         const keys = context.keys()
+//         const values = keys.map(context)
 
-        interface ValueType {
-            default: string
-        }
+//         interface ValueType {
+//             default: string
+//         }
 
-        const data = keys.map((key, index) => {
-            let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
-            const value: ValueType = values[index]['default']
-            const document = matter<any, any>({
-                content: value,
-            })
-            return {
-                frontmatter: document.data,
-                markdownBody: document.content,
-                slug,
-            }
-        })
-        return data
-    })(require.context('../posts', true, /\.md$/))
+//         const data = keys.map((key, index) => {
+//             let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
+//             const value: ValueType = values[index]['default']
+//             const document = matter<any, any>({
+//                 content: value,
+//             })
+//             return {
+//                 frontmatter: document.data,
+//                 markdownBody: document.content,
+//                 slug,
+//             }
+//         })
+//         return data
+//     })(require.context('../posts', true, /\.md$/))
 
-    return {
-        props: {
-            posts,
-        },
-    }
-}
+//     return {
+//         props: {
+//             posts,
+//         },
+//     }
+// }
 
 export default Home
