@@ -1,8 +1,0 @@
-/* Import tailwindcss directives */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* Custom classes go below */
-
-/* import prism theme */
-@import './prism.css';

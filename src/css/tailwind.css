@@ -1,0 +1,19 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;700&display=swap');
+
+/* Import tailwindcss directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Custom classes go below */
+
+/* import prism theme */
+@import './prism.css';
+
+section {
+    @apply py-12;
+}
+
+section > div:first-of-type {
+    @apply px-4 max-w-xl mx-auto;
+}

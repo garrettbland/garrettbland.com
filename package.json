@@ -1,32 +1,35 @@
 {
     "name": "garrettbland.com",
     "version": "0.2.0",
+    "prettier": {
+        "semi": false,
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 70,
+        "tabWidth": 4,
+        "useTabs": false,
+        "bracketSpacing": true
+    },
     "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start"
+        "dev": "rimraf dist && npx @11ty/eleventy --serve & npx tailwindcss -i src/css/tailwind.css -o dist/style.css -w",
+        "build": "rimraf dist && ELEVENTY_PRODUCTION=true @11ty/eleventy && NODE_ENV=production npx tailwindcss -i src/css/tailwind.css -o dist/style.css --minify"
     },
     "author": "Garrett Bland",
     "license": "MIT",
-    "dependencies": {
-        "next": "^10.1.2",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2"
-    },
+    "dependencies": {},
     "devDependencies": {
-        "@tailwindcss/jit": "^0.1.18",
-        "@tailwindcss/typography": "^0.4.0",
-        "@types/node": "^14.14.37",
-        "@types/react": "^17.0.3",
-        "@types/webpack-env": "^1.16.0",
-        "autoprefixer": "^10.2.5",
-        "gray-matter": "^4.0.2",
-        "postcss": "^8.2.9",
-        "prettier": "^2.2.1",
-        "prismjs": "^1.23.0",
-        "raw-loader": "^4.0.2",
-        "react-markdown": "^5.0.3",
-        "tailwindcss": "^2.0.4",
-        "typescript": "^4.2.3"
+        "@11ty/eleventy": "^0.12.1",
+        "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
+        "@garrettbland/img-alt-tag-check": "^0.0.4",
+        "@garrettbland/lazy-load-images": "^0.0.6",
+        "@tailwindcss/forms": "^0.3.3",
+        "@tailwindcss/typography": "^0.4.1",
+        "alpinejs": "^3.0.6",
+        "eleventy-plugin-error-overlay": "^0.1.2",
+        "html-minifier": "^4.0.0",
+        "jsdom": "^16.6.0",
+        "prettier": "^2.3.1",
+        "rimraf": "^3.0.2",
+        "tailwindcss": "^2.2.0"
     }
 }
