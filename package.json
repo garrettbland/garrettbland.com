@@ -23,7 +23,7 @@
         "gray-matter": "^4.0.2",
         "postcss": "^8.2.9",
         "prettier": "^2.2.1",
-        "prismjs": "^1.23.0",
+        "prismjs": "^1.24.0",
         "raw-loader": "^4.0.2",
         "react-markdown": "^5.0.3",
         "tailwindcss": "^2.0.4",
