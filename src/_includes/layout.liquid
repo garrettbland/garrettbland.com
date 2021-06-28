@@ -5,11 +5,39 @@
     {% include head %}
 </head>
 
-<body>
-    <div class="mb-24">
+<body x-data="darkMode" class="transition-all" x-bind:class="isDarkModeEnabled ? 'dark bg-blueGray-900' : 'bg-gray-50'">
+    <main class="mb-24">
         {% include navbar %}
         {{ content }}
-    </div>
+    </main>
+
+    <!-- Light/Dark Mode -->
+    <script>
+        function darkMode () {
+            return {
+                isDarkModeEnabled: false,
+                init: function () {
+                    console.log('Alpine ready to roll...')
+
+                    // Watch for dark mode changing and update local storage
+                    this.$watch('isDarkModeEnabled', (newValue) => {
+                        console.log(`Setting dark mode in local storage to ${newValue}...`)
+                        localStorage.setItem('isDarkModeEnabled', newValue)
+                    })
+
+                    // Initially grab local storage and set if local storage key is present
+                    if (localStorage.getItem('isDarkModeEnabled')) {
+                        this.isDarkModeEnabled = JSON.parse(localStorage.getItem('isDarkModeEnabled'))
+                    }
+                },
+                toggleDarkMode: function () {
+                    this.isDarkModeEnabled = !this.isDarkModeEnabled
+                }
+            }
+        }
+    </script>
+    <!-- End Light/Dark Mode -->
+
     <!-- Alpine JS File -->
     <script src="/alpine.js?v={% version %}"></script>
 </body>
