@@ -34,7 +34,15 @@ description: 'Im Garrett Bland, a full stack web developer with Eagle Radio, liv
         <h3 class="flex items-center space-x-4">
             <span class="text-3xl mr-2">📝</span>Blog Posts
         </h3>
-        <ul></ul>
+        <ul>
+            {% for post in posts %}
+                <li>
+                    <a href="/posts/{{ post.id }}/">
+                        {{ post.properties.Title.title[0].text.content }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
 </section>
 <!-- End Blog Posts -->

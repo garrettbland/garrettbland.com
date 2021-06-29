@@ -1,0 +1,19 @@
+---
+pagination:
+  data: posts
+  size: 1
+  alias: post
+permalink: 'posts/{{ post.id }}/index.html'
+eleventyComputed:
+  title: "{{ post.properties.Title.title[0].text.content }}"
+---
+
+<section>
+    <div>
+        <article class="prose dark:prose-dark">
+            <h1>
+                {{ post.properties.Title.title[0].text.content }}
+            </h1>
+        </article>
+    </div>
+</section>

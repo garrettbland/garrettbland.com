@@ -27,6 +27,7 @@
         "@tailwindcss/typography": "^0.4.1",
         "alpinejs": "^3.0.6",
         "chalk": "^4.1.1",
+        "dotenv": "^10.0.0",
         "eleventy-plugin-error-overlay": "^0.1.2",
         "html-minifier": "^4.0.0",
         "jsdom": "^16.6.0",
