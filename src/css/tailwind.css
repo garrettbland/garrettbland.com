@@ -1,11 +1,22 @@
 /* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600;700&display=swap&family=Lexend+Deca&display=swap');
 
 /* Import tailwindcss directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 /* Custom classes go below */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.font-lexa {
+    font-family: 'Lexend Deca', sans-serif;
+}
 
 section {
     @apply py-12;

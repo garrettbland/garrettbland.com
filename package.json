@@ -12,11 +12,10 @@
     },
     "scripts": {
         "dev": "rimraf dist && npx @11ty/eleventy --serve & npx tailwindcss -i src/css/tailwind.css -o dist/style.css -w",
-        "build": "rimraf dist && ELEVENTY_PRODUCTION=true @11ty/eleventy && NODE_ENV=production npx tailwindcss -i src/css/tailwind.css -o dist/style.css --minify"
+        "build": "rimraf dist && ELEVENTY_PRODUCTION=true npx @11ty/eleventy && NODE_ENV=production npx tailwindcss -i src/css/tailwind.css -o dist/style.css --minify"
     },
     "author": "Garrett Bland",
     "license": "MIT",
-    "dependencies": {},
     "devDependencies": {
         "@11ty/eleventy": "^0.12.1",
         "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
@@ -29,8 +28,10 @@
         "chalk": "^4.1.1",
         "dotenv": "^10.0.0",
         "eleventy-plugin-error-overlay": "^0.1.2",
+        "gray-matter": "^4.0.3",
         "html-minifier": "^4.0.0",
         "jsdom": "^16.6.0",
+        "markdown-it": "^10.0.0",
         "prettier": "^2.3.1",
         "rimraf": "^3.0.2",
         "tailwindcss": "^2.2.0"
