@@ -38,7 +38,7 @@ description: 'Im Garrett Bland, a full stack web developer with Eagle Radio, liv
             {% for post in posts %}
                 <li>
                     <a href="/posts/{{ post.id }}/">
-                        {{ post.properties.Title.title[0].text.content }}
+                        {{ post.title }}
                     </a>
                 </li>
             {% endfor %}
@@ -82,9 +82,9 @@ description: 'Im Garrett Bland, a full stack web developer with Eagle Radio, liv
             </a>
         </p>
         <p>
-            I write my blog posts using
+            I write my blog posts & content using
             <a href="https://www.notion.so/" rel="noreferrer" target="_blank">Notion</a>
-            and their API to pull in the posts automatically.
+            and their API to pull in the data.
         </p>
     </div>
 </section>

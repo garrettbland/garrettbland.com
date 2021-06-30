@@ -15,7 +15,7 @@ module.exports = async function () {
      * Fetch list of posts from notion database and
      * where status is published & category is post
      */
-    const response = await notion.databases.query({
+    const posts = await notion.databases.query({
         database_id: databaseId,
         filter: {
             and: [
@@ -42,10 +42,20 @@ module.exports = async function () {
     })
 
     console.log(
-        chalk.green(
-            `📝 Retrieved ${response.results.length} posts...`
-        )
+        chalk.green(`📝 Retrieved ${posts.results.length} posts...`)
     )
 
-    return response.results
+    const pretty_results = await Promise.all(
+        posts.results.map(async (post) => {
+            return {
+                id: post.id,
+                title: post.properties.Title.title[0].text.content,
+                blocks: await notion.blocks.children.list({
+                    block_id: post.id,
+                }),
+            }
+        })
+    )
+
+    return pretty_results
 }

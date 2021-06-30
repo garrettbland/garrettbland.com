@@ -1,3 +1,3 @@
 # garrettbland.com
 
-> My personal blog (https://garrettbland.com)
+> My personal website (https://garrettbland.com)

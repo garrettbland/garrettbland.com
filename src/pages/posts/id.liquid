@@ -5,15 +5,31 @@ pagination:
   alias: post
 permalink: 'posts/{{ post.id }}/index.html'
 eleventyComputed:
-  title: "{{ post.properties.Title.title[0].text.content }}"
+  title: "{{ post.title }}"
 ---
 
 <section>
     <div>
         <article class="prose dark:prose-dark">
             <h1>
-                {{ post.properties.Title.title[0].text.content }}
+                {{ post.title }}
             </h1>
+            {% for block in post.blocks.results %}
+                {% if block.type == 'paragraph' %}
+                    <p>
+                        {% for text in block.paragraph.text %}
+                            {% if text.text.link.url %}
+                                <a href="{{ text.text.link.url }}" target="_blank" rel="noreferrer">
+                                    {{ text.text.content}}
+                                </a>
+                            {% else %}
+                                {{ text.text.content }}
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                {% endif %}
+            {% endfor %}
+            {{ post.blocks.results }}
         </article>
     </div>
 </section>
