@@ -31,7 +31,7 @@ collections:
             }
           - {
                 label: 'Published',
-                name: 'date',
+                name: 'published',
                 widget: 'datetime',
                 required: true,
                 date_format: 'YYYY-MM-DD',

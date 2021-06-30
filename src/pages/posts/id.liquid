@@ -3,33 +3,29 @@ pagination:
   data: posts
   size: 1
   alias: post
-permalink: 'posts/{{ post.id }}/index.html'
+permalink: 'posts/{{ post.data.title | slug }}/index.html'
 eleventyComputed:
-  title: "{{ post.title }}"
+  title: "{{ post.data.title }}"
 ---
 
 <section>
     <div>
-        <article class="prose dark:prose-dark">
-            <h1>
-                {{ post.title }}
+        <article class="prose prose-lg dark:prose-dark">
+            <h1 class="leading-loose">
+                {{ post.data.title }}
             </h1>
-            {% for block in post.blocks.results %}
-                {% if block.type == 'paragraph' %}
-                    <p>
-                        {% for text in block.paragraph.text %}
-                            {% if text.text.link.url %}
-                                <a href="{{ text.text.link.url }}" target="_blank" rel="noreferrer">
-                                    {{ text.text.content}}
-                                </a>
-                            {% else %}
-                                {{ text.text.content }}
-                            {% endif %}
-                        {% endfor %}
-                    </p>
-                {% endif %}
-            {% endfor %}
-            {{ post.blocks.results }}
+            <p class="flex flex-row items-center">
+                <span class="mr-2">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    </svg>
+                </span>
+                Posted on
+                <time class="ml-1" datetime="{{ post.data.published | date: "%Y-%m-%d %H:%M" }}">
+                    {{ post.data.published | date: "%b %d, %Y"}}
+                </time>
+            </p>
+            {{ post.content | markdown }}
         </article>
     </div>
 </section>

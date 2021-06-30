@@ -53,7 +53,7 @@ My code examples using PrismJS are giving me issues. Somewhere in the markdown t
 
 After reading through the docs, all I need to do is apply the highlighting after the `DOM` has mounted. So I setup the Prism highlight function in a `useEffect` hook. I also brought in Fira Code from google analytics, because that's also what I use in my local IDE.
 
-```javascript
+```js
 useEffect(() => {
     prism.highlightAll()
 }, [])

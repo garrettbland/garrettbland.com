@@ -2,8 +2,7 @@ const htmlmin = require('html-minifier')
 const lazyloadimages = require('@garrettbland/lazy-load-images')
 const imagealttagcheck = require('@garrettbland/img-alt-tag-check')
 const ErrorOverlay = require('eleventy-plugin-error-overlay')
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
-
+const md = require('markdown-it')()
 const now = String(Date.now())
 
 module.exports = function (eleventyConfig) {
@@ -37,6 +36,16 @@ module.exports = function (eleventyConfig) {
     })
 
     /**
+     * Filter to let us render makrdown
+     */
+    eleventyConfig.addFilter('markdown', function (value) {
+        /**
+         * Takes in raw markdown text and spits out html
+         */
+        return md.render(value)
+    })
+
+    /**
      * Validates that all images have an alt tag & value
      */
     eleventyConfig.addPlugin(imagealttagcheck)
@@ -45,11 +54,6 @@ module.exports = function (eleventyConfig) {
      * Add native lazy loading to images
      */
     eleventyConfig.addPlugin(lazyloadimages)
-
-    /**
-     * Syntax Highlighting
-     */
-    eleventyConfig.addPlugin(syntaxHighlight)
 
     /**
      * Minify HTML

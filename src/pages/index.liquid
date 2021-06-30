@@ -37,8 +37,8 @@ description: 'Im Garrett Bland, a full stack web developer with Eagle Radio, liv
         <ul>
             {% for post in posts %}
                 <li>
-                    <a href="/posts/{{ post.id }}/">
-                        {{ post.title }}
+                    <a href="/posts/{{ post.data.title | slug }}">
+                        {{ post.data.title }}
                     </a>
                 </li>
             {% endfor %}
@@ -52,7 +52,7 @@ description: 'Im Garrett Bland, a full stack web developer with Eagle Radio, liv
     <div class="prose dark:prose-dark">
         <h3 class="flex items-center space-x-4">
             <span class="text-3xl mr-2">📦</span>
-            Projects & Products
+            Projects
         </h3>
         <ul></ul>
     </div>
