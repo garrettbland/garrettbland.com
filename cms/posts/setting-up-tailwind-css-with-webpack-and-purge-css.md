@@ -1,7 +1,7 @@
 ---
 active: true
 title: Setting up Tailwind CSS with Webpack and Purge CSS
-published: 2021-06-30
+published: 2020-06-21
 category: general
 id: setting-up-tailwind-css-with-webpack-and-purge-css
 ---
