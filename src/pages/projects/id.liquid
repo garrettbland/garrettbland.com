@@ -1,0 +1,20 @@
+---
+pagination:
+  data: projects
+  size: 1
+  alias: project
+permalink: 'projects/{{ project.data.title | slug }}/index.html'
+eleventyComputed:
+  title: "{{ project.data.title }}"
+---
+
+<section>
+    <div>
+        <article class="prose prose-lg dark:prose-dark">
+            <h1 class="leading-loose">
+                {{ project.data.title }}
+            </h1>
+            {{ project.content | markdown }}
+        </article>
+    </div>
+</section>
