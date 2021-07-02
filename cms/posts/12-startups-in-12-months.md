@@ -37,6 +37,8 @@ Here is my current plan as of writing this (July 1, 2021). I will update these l
 
 Get started on client work faster. Send clients a unique form with customized questions and inputs.
 
+Status: 🏗 In Progress
+
 ### August, 2021
 
 ### September, 2021
