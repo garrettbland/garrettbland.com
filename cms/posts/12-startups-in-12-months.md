@@ -33,7 +33,7 @@ Here is my current plan as of writing this (July 1, 2021). I will update these l
 
 ### July, 2021
 
-**[Client Deliverables](#)**
+**[Client Deliverables](/posts/client-deliverables/)**
 
 Get started on client work faster. Send clients a unique form with customized questions and inputs.
 
