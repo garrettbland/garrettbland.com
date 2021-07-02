@@ -15,6 +15,7 @@
 
         <!-- Add event listener for adding slug as id automatically -->
         <script>
+            window.CMS.registerPreviewStyle("https://www.garrettbland.com/style.css");
             window.CMS.registerEventListener({
                 name: 'preSave',
                 handler: ({ entry }) => {
@@ -27,7 +28,33 @@
                     }
                 },
             });
+
+            setTimeout(function () {
+                var preview_frame = document.getElementById('preview-pane')
+                preview_frame.contentWindow.document.body.className += ' prose prose-lg'
+            }, 5000)
         </script>
- 
+
+
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html> 
     </body>
 </html>
