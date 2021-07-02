@@ -1,5 +1,5 @@
 ---
-active: false
+active: true
 title: 12 startups in 12 months
 published: 2021-07-01
 category: general
