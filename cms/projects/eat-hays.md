@@ -3,9 +3,9 @@ active: true
 title: Eat Hays
 id: eat-hays
 ---
-[https://github.com/garrettbland/EatHays](https://github.com/garrettbland/EatHays)
+<https://github.com/garrettbland/EatHays>
 
-[https://www.facebook.com/EatHays](https://www.facebook.com/EatHays)
+<https://www.facebook.com/EatHays>
 
 ### Whats Eat Hays?
 
@@ -21,8 +21,8 @@ I can’t remember the exact reasoning or motivation behind the project if I’m
 
 There were pretty much two big technologies I used to build it.
 
--   React Native
--   Firebase
+* React Native
+* Firebase
 
 [React Native](https://reactnative.dev/) is a javascript framework that when ran through a process, generates native code for the build device. So in this case, I could write one code base in javascript using React, and it would compile to a native app for both iOS and Android devices.
 
@@ -32,11 +32,11 @@ As for storing data, user events, logs, menus, specials, ect, I used [Google’s
 
 After building the app, I setup all of the normal social media accounts gearing up to push this thing as far as I could. The plan was to eventually sell ads once I got people to using it on a regular basis.
 
-Before I had begun building the app, I missed an extremely crucial step, and that was **_validating the idea_**. I had zero clue if people would like this or would even use it. That didn’t stop my developer fist mind though, I dove right on in and spent 100’s of hours developing before even touching marketing. (Don't do this by the way)
+Before I had begun building the app, I missed an extremely crucial step, and that was ***validating the idea***. I had zero clue if people would like this or would even use it. That didn’t stop my developer fist mind though, I dove right on in and spent 100’s of hours developing before even touching marketing. (Don't do this by the way)
 
-My very close friend created the logo and provided tons of feedback and ideas. I purchased business cards, flyers, stickers, and other promotional gear. I started running paid Facebook and Twitter advertising, met face to face with every single local restaurant in town (around 30-some) asking them to send me their specials and for permission to put stickers on their front doors. 4 years later, I still see those stickers all over. 😄
+A friend created the logo and provided tons of feedback and ideas. I purchased business cards, flyers, stickers, and other promotional gear. I started running paid Facebook and Twitter advertising, met face to face with every single local restaurant in town (around 30-some) asking them to send me their specials and for permission to put stickers on their front doors. 4 years later, I still see those stickers all over. 😄
 
-I even got permission from some owners to setup lighting and purchased a DSLR camera to take _professional_ pictures of food for marketing material as it went out to customers. (They were pretty awful. I was a total newbie but had the confidence of a professional)
+I even got permission from some owners to setup lighting and purchased a DSLR camera to take *professional* pictures of food for marketing material as it went out to customers. (They were pretty awful. I was a total newbie but had the confidence of a professional)
 
 I spent hours and hours creating social media posts, creating videos, talking to businesses, ect. The time spent creating all of this marketing material easily dwarfed my time building the application. It was a grind, and no paying users yet.
 
