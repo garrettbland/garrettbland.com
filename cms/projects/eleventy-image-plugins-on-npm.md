@@ -1,7 +1,7 @@
 ---
 active: true
-title: Eleventy Image Plugins on NPM
-id: eleventy-image-plugins-on-npm
+title: Eleventy Image Plugins
+id: eleventy-image-plugins
 ---
 I use [11ty](https://www.11ty.dev/) a lot for my personal and client projects. After building a handful of sites, I realized I wanted a way to force myself to add thing's that I miss from time to time, like an \`alt\` tag on an image. I know there are linting rules I could setup, but with \`.liquid\` files, I had a tough time figuring it out.
 
