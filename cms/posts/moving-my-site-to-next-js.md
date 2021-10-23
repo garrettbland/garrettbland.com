@@ -5,7 +5,7 @@ published: 2021-01-12
 category: general
 id: moving-my-site-to-next-js
 ---
-> This isn't the case anymore - I went back to 11ty
+Edit: This isn't the case anymore - I went back to 11ty
 
 Currently, my site is powered by [Eleventy](https://www.11ty.dev/), which is a very very cool static site generator. I actually made an eleventy github template ([Eleventy Kit](https://eleventykit.netlify.app/)) that I use frequently for work projects.
 
