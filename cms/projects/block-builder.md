@@ -3,8 +3,9 @@ active: true
 title: Block Builder
 id: block-builder
 ---
-Public demo - [blockbuilder.app](https://blockbuilder.app/)
-Github repo - [https://github.com/garrettbland/blockbuilder](https://github.com/garrettbland/blockbuilder)
+Pubic Beta - [blockbuilder.app](https://blockbuilder.app/)
+
+Github repo - <https://github.com/garrettbland/blockbuilder>
 
 I use [Tailwind CSS](https://tailwindcss.com/) with pretty much every project now days. Something I miss about using wordpress, is the nice visual editors like [Divi](https://www.elegantthemes.com/gallery/divi). I decided to build a visual tailwind website builder.
 
