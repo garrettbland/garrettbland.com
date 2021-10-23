@@ -1,5 +1,5 @@
 ---
-active: true
+active: false
 title: Client Deliverables
 published: 2021-07-01
 category: 12-startups
