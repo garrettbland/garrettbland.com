@@ -28,25 +28,6 @@ description: 'Im Garrett Bland, a Full Stack Web Developer with Eagle Communicat
 </section>
 <!-- End Intro -->
 
-<!-- Blog Posts -->
-<section>
-    <div class="prose dark:prose-dark">
-        <h3 class="flex items-center space-x-4">
-            <span class="text-3xl mr-2">📝</span>Blog Posts
-        </h3>
-        <ul>
-            {% for post in posts %}
-                <li>
-                    <a href="/posts/{{ post.data.title | slug }}">
-                        {{ post.data.title }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-</section>
-<!-- End Blog Posts -->
-
 <!-- Projects & Packages -->
 <section>
     <div class="prose dark:prose-dark">
@@ -66,6 +47,25 @@ description: 'Im Garrett Bland, a Full Stack Web Developer with Eagle Communicat
     </div>
 </section>
 <!-- End Projects & Packages -->
+
+<!-- Blog Posts -->
+<section>
+    <div class="prose dark:prose-dark">
+        <h3 class="flex items-center space-x-4">
+            <span class="text-3xl mr-2">📝</span>Blog Posts
+        </h3>
+        <ul>
+            {% for post in posts %}
+                <li>
+                    <a href="/posts/{{ post.data.title | slug }}">
+                        {{ post.data.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+<!-- End Blog Posts -->
 
 <!-- About this site -->
 <section>
