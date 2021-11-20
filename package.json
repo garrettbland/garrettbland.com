@@ -1,38 +1,25 @@
 {
     "name": "garrettbland.com",
-    "version": "0.2.0",
-    "prettier": {
-        "semi": false,
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 70,
-        "tabWidth": 4,
-        "useTabs": false,
-        "bracketSpacing": true
-    },
+    "version": "0.3.0",
     "scripts": {
-        "dev": "rimraf dist && npx @11ty/eleventy --serve & npx tailwindcss -i src/css/tailwind.css -o dist/style.css -w",
-        "build": "rimraf dist && ELEVENTY_PRODUCTION=true npx @11ty/eleventy && NODE_ENV=production npx tailwindcss -i src/css/tailwind.css -o dist/style.css --minify"
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
     },
     "author": "Garrett Bland",
     "license": "MIT",
+    "dependencies": {
+        "next": "^12.0.4",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
     "devDependencies": {
-        "@11ty/eleventy": "^0.12.1",
-        "@garrettbland/img-alt-tag-check": "^0.0.4",
-        "@garrettbland/lazy-load-images": "^0.0.6",
-        "@notionhq/client": "^0.2.0",
-        "@tailwindcss/forms": "^0.3.3",
         "@tailwindcss/typography": "^0.4.1",
-        "alpinejs": "^3.0.6",
-        "chalk": "^4.1.1",
-        "dotenv": "^10.0.0",
-        "eleventy-plugin-error-overlay": "^0.1.2",
-        "gray-matter": "^4.0.3",
-        "html-minifier": "^4.0.0",
-        "jsdom": "^16.6.0",
-        "markdown-it": "^10.0.0",
-        "prettier": "^2.3.1",
-        "rimraf": "^3.0.2",
-        "tailwindcss": "^2.2.0"
+        "@types/react": "^17.0.35",
+        "eslint": "^7.32.0",
+        "eslint-config-next": "12.0.4",
+        "tailwindcss": "^2.2.19",
+        "typescript": "^4.5.2"
     }
 }
