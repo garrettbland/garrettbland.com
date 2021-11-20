@@ -11,7 +11,7 @@ function HelloWorld() {
                     background: red;
                 }
                 div:hover {
-                    background: orange;
+                    background: pink;
                 }
                 @media (max-width: 600px) {
                     div {
