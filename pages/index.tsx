@@ -1,10 +1,11 @@
 import Hello from '@/components/Hello'
+import Layout from '@/components/Layout'
 
 const Home = () => {
     return (
-        <div>
-            <Hello/>
-        </div>
+        <Layout>
+            <h1>garrett bland</h1>
+        </Layout>
     )
 }
 
