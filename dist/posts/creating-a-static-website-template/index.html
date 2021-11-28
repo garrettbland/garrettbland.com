@@ -1,0 +1,171 @@
+<html lang="en-us"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta httpequiv="Content-Type" content="text/html; charset=utf-8"><meta name="language" content="English"><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Creating a static website template</title><meta name="description" content=""><meta property="og:title" content="Creating a static website template"><meta property="og:site_name" content="Creating a static website template"><meta property="og:url" content=""><meta property="og:description" content=""><meta property="og:type" content="website"><link rel="shortcut icon" type="image/ico" href="/favicon.ico"><link rel="stylesheet" href="/style.css?v=1635015516843"></head><body x-data="darkMode" class="transition-all" x-bind:class="isDarkModeEnabled ? 'dark bg-blueGray-900' : 'bg-gray-50'"><main class="mb-24"><nav class="max-w-xl mx-auto px-4"><div class="flex justify-between items-center py-4"><a class="font-lexa relative z-20 text-xl dark:text-white font-semibold hover:underline" href="/">Garrett Bland</a><div class="flex items-center flex-row space-x-2"><button class="transform ease-in-out duration-150 hover:scale-110 origin-center p-1 hover:bg-gray-100 dark:hover:bg-blue-900 rounded-lg" x-on:click="toggleDarkMode()"><div class="relative w-8 h-8"><svg class="h-8 w-8 p-1 text-gray-700 hover:text-gray-700 dark:text-blue-50 absolute top-0 left-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="isDarkModeEnabled" x-transition.opacity="" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg> <svg class="h-8 w-8 p-1 text-gray-700 absolute top-0 left-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="!isDarkModeEnabled" x-transition.opacity="" xmlns="http://www.w3.org/2000/svg"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></div></button> <a class="transform ease-in-out duration-150 hover:scale-110 origin-center p-1 hover:bg-gray-100 dark:hover:bg-blue-900 rounded-lg" href="https://github.com/garrettbland" rel="noreferrer" target="_blank"><img alt="github-logo" class="w-8 h-8" src="/images/github.png" loading="lazy"> </a><a class="transform ease-in-out duration-150 hover:scale-110 origin-center p-1 hover:bg-gray-100 dark:hover:bg-blue-900 rounded-lg" href="https://twitter.com/gbland777" rel="noreferrer" target="_blank"><img alt="twitter-logo" class="w-8 h-8" src="/images/twitter.png" loading="lazy"></a></div></div><div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-6 dark:via-indigo-700"></div></nav><section><div><article class="prose prose-lg dark:prose-dark"><h1 class="leading-loose">Creating a static website template</h1><p class="flex flex-row items-center"><span class="mr-2"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> </span>Posted on <time class="ml-1" datetime="2020-07-28 19:00">Jul 28, 2020</time></p><p>Github Repo - <a href="https://github.com/garrettbland/eleventykit">https://github.com/garrettbland/eleventykit</a></p><h3>A static website template?</h3><p>At work and personally, I create many websites, and find that I often repeat the same structure and layout for each site. I wanted to create a github repo as a template and would quickly let my team and I get the structure setup and get right into coding.</p><h3>Common similarities between each website</h3><p>There are a handful of things we always use with each site. Sometimes we just use a CDN and don't bother setting stuff up like webpack or postCSS, because of time constraints or just me being lazy. Some of the same technologies we use between each site.</p><ul><li>Netlify (hosting)</li><li>Eleventy (Static site generator)</li><li>TailwindCSS</li><li>AplineJS</li></ul><p>Some other technologies I would like to include with each site build out of the box.</p><ul><li>Webpack</li><li>PostCSS</li><li>Icons</li></ul><h3>Setting up a fresh project</h3><p>First step is give our new project a name, and I'm going with with <code>eleventykit</code>.</p><pre><code class="language-bash">mkdir eleventykit &amp;&amp; cd eleventykit &amp;&amp; npm init -y
+</code></pre><p>Next up, we will setup some of our commonly used npm packages we use between each project.</p><pre><code class="language-bash">npm install @11ty/eleventy tailwindcss alpinejs
+</code></pre><p>Eleventy is a wonderful static site generator, tailwindcss is the most useful thing on this planet for styling, and alpinejs is an extremely useful javascript tool. It allows state management, and is perfect for us as we never need that much javascript. Usually needed for a image slider or mobile menu.</p><h3>Setting up scaffolding</h3><p>Now I'm going to setup my base folder structure for our sites. We will create a top level <code>src</code> directory, for all of our code &amp; assets to live in. Our basic structure will look like this.</p><pre><code class="language-text">eleventykit
+|
++--src
+	|
+	+--_data
+	+--_includes
+	+--css
+	+--images
+	+--js
+	+--pages
+		|
+		+--index.liquid
++--package.json
++--node_modules
++--readme.md
++--.gitignore
+</code></pre><p>Once created, I will now update our <code>.gitignore</code> so it ignores a few things.</p><pre><code class="language-text"># node
+node_modules/
+
+# MacOS
+.DS_Store
+
+# build directory
+dist
+</code></pre><p>Now we will go into our <code>package.json</code> and add two new scripts for development and building for production.</p><pre><code class="language-json">// ...
+"dev": "npx @11ty/eleventy --serve",
+"build": "npx @11ty/eleventy"
+//..
+</code></pre><p>Lastly, before we test our new site, we will create an eleventy config file in our base directory to tell eleventy how we want our site built. We will create a new file called <code>.eleventy.js</code>. The config file lets us define how we want to handle assets, add in extra plugins, and define our input and outputs.</p><pre><code class="language-javascript">module.exports = function (eleventyConfig) {
+    // pass image assets right through
+    eleventyConfig.addPassthroughCopy('src/images')
+
+    return {
+        passthroughFileCopy: true,
+        dir: {
+            input: 'src/pages',
+            includes: '_includes',
+            output: 'dist',
+        },
+    }
+}
+</code></pre><p>Time to test! I'll run <code>npm run dev</code>, and it should give us an output of where our files are being served from. By default it will launch on <code>localhost:8080</code>, and there it is. Isn't it beautiful!</p><p><img src="/images/eleventykit/raw_eleventykit.png" alt="/images/eleventykit/raw_eleventykit.png" loading="lazy"></p><h3>Adding in TailwindCSS</h3><p>Now, lets setup our styling for the site. We will follow the official documentation on the tailwind site. We will create a new file called <code>tailwind.css</code>, and include the tailwind directives.</p><pre><code class="language-css">/* eleventykit/src/css/tailwind.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/** Custom styles go below **/
+</code></pre><p>Next will we create a tailwind config file. This will will create an empty <code>tailwind.config.js</code> so we can customize tailwind if needed and setup PurgeCSS easily later on.</p><pre><code class="language-bash">npx tailwindcss init
+</code></pre><p>Now, we will add in our bundler, and we will use webpack for this. We will need a few new packages to use webpack, as well as a few style loaders and post css. I also like to have my css as separate files from my javascript. Lets install the new needed packages first.</p><pre><code class="language-bash">npm install webpack webpack-cli style-loader postcss-loader mini-css-extract-plugin autoprefixer
+</code></pre><p>Next, lets create <code>webpack.config.js</code> file so wen can tell webpack how we want it to parse and bundle files.</p><pre><code class="language-javascript">// webpack.config.js
+const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+module.exports = {
+    entry: __dirname + '/src/js/main.js',
+    output: {
+        path: path.resolve(__dirname, 'dist/assets'),
+        filename: 'main.js',
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+            },
+        ],
+    },
+    plugins: [new MiniCssExtractPlugin()],
+}
+</code></pre><p>Lets also go ahead and create an initial <code>main.js</code> file in <code>eleventykit/src/js/scripts/</code> so we can define an entry for our javascript and any import our <code>tailwind.css</code> file for PostCSS to do its thing during the webpack bundle.</p><pre><code class="language-javascript">// eleventykit/src/js/main.js
+
+import '../css/tailwind.css'
+console.log('Webpack is working 🎉')
+</code></pre><p>Finally, now we can setup our postCSS config file. Create a new file called <code>postcss.config.js</code> in our base directory. The tailwind documentation recommends using the tailwind plugin as well as autoprefixer to add certain browser prefixes to make our site more cross browser friendly.</p><pre><code class="language-javascript">// postcss.config.js
+module.exports = {
+    plugins: [require('tailwindcss'), require('autoprefixer')],
+}
+</code></pre><p>I lied, one last step before we test. We need to actually add webpack into our build chain. Lets revisit <code>package.json</code>, and add in a few new scripts to take care of building this automatically. However, since we want webpack to watch the files while we also have eleventy watching our site files, we need them both to run in parallel.</p><pre><code class="language-bash">npm install npm-run-all cross-env rimraf
+</code></pre><p>We will also add in a handful of new scripts, and take advantage of NPM's wildcard like way of running multiple scripts in a single command.</p><pre><code class="language-json">"scripts": {
+	"clean": "rimraf dist",
+    "serve:eleventy": "npx @11ty/eleventy --serve",
+    "serve:webpack": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "dev": "npm-run-all clean --parallel serve:*",
+    "build:eleventy": "npx @11ty/eleventy",
+    "build:webpack": "cross-env NODE_ENV=production webpack --mode production",
+    "build": "npm-run-all clean build:*"
+  },
+</code></pre><p>Perfect! Now lets go into our <code>index.liquid</code> file and add in some additional html and reference our new build <code>javascript</code> and <code>css</code> files. I'll reference the javascript at the end of the page so its avoids slowing down browser load and paint times, and I will also add in some tailwind classes to verify its working.</p><pre><code class="language-html">&lt;!-- eleventy/src/pages/index.liquid --&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;EleventyKit&lt;/title&gt;
+        &lt;!-- CSS file built by webpack --&gt;
+        &lt;link href="/assets/main.css" rel="stylesheet" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;
+            &lt;h1 class="text-4xl font-black"&gt;Eleventy Kit&lt;/h1&gt;
+            &lt;p class="text-lg text-gray-700 underline"&gt;An eleventy starter kit&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- JS file built by webpack--&gt;
+        &lt;script src="/assets/main.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>Running <code>npm run dev</code> gives us our new beautiful site!</p><p><img src="/images/eleventykit/styled_eleventykit.png" alt="/images/eleventykit/styled_eleventykit.png" loading="lazy"></p><p>If you noticed the main.css file size, it was a hefty 1.8 megabytes, which is way to large for our simple site. Thankfully, tailwindcss ships with PurgeCSS built in. Which means we can remove unused CSS from our stylesheet automatically with the <code>tailwind.config.js</code> file. Notice - When <code>NODE_ENV</code> is set to <code>production</code> (which we add in our <code>package.json</code>), it will remove unused styles by comparing our code to the full tailwind stylesheet. During development it will stay the same size. Lets add our file patterns to the purge array we want to check during build. In our case, we use <code>.liquid</code> template files, so we will add that for now.</p><pre><code class="language-javascript">// tailwind.config.js
+module.exports = {
+    purge: ['./src/**/*.liquid'],
+    theme: {
+        extend: {},
+    },
+    variants: {},
+    plugins: [],
+}
+</code></pre><p>Running <code>npm run build</code>, gives us a tiny 14.5 Kilobytes, so we know purgecss is working!</p><h3>Adding in AlpineJS</h3><p>Now that we have webpack and our bundling already setup, to add in alpinejs to our build chain is very simple. All we need to do is import alpinejs into our <code>main.js</code> file.</p><pre><code class="language-javascript">// eleventykit/src/js/main.js
+import '../css/tailwind.css'
+import 'alpinejs'
+</code></pre><p>To test, lets go back into our <code>index.liquid</code> file, and sprinkle in some alpine directives to verify its all working as expected. We will just copy/paste their example from the documentation. Running <code>npm run dev</code>, we can verify that alpine is working by testing the dropdown.</p><pre><code class="language-html">&lt;div x-data="{ open: false }"&gt;
+    &lt;button @click="open = true"&gt;Open Dropdown&lt;/button&gt;
+
+    &lt;ul x-show="open" @click.away="open = false"&gt;
+        Dropdown Body
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre><h3>Whats next?</h3><p>I think we have everything checked off our list, except for icons. Lets install feather icons.</p><pre><code class="language-bash">npm install feather-icons
+</code></pre><p>With feather installed, I'll follow the documentation to reference feather in our javascript, and then call the <code>replace()</code> method. I'll update our <code>main.js</code> to include feather as well as add in some comments.</p><pre><code class="language-javascript">// eleventykit/src/js/main.js
+
+/**
+ * Import our Tailwind CSS file with directives and any
+ * custom css rules
+ */
+import '../css/tailwind.css'
+
+/**
+ * Import Alpine JS
+ */
+import 'alpinejs'
+
+/**
+ * Import feather icons, then run feather.replace()
+ * to replace any '&lt;i data-feather="circle"&gt;&lt;/i&gt;' elements
+ * with the actual SVG
+ */
+import feather from 'feather-icons/dist/feather.js'
+feather.replace()
+</code></pre><p>Now lets add in an icon element to our html to test to make sure its working correctly. Reload the page and we should see our new shiny icon!</p><pre><code class="language-html">&lt;!-- eleventykit/src/pages/index.liquid --&gt;
+&lt;i data-feather="camera"&gt;&lt;/i&gt;
+</code></pre><p><img src="/images/eleventykit/icon_eleventykit.png" alt="/images/eleventykit/icon_eleventykit.png" loading="lazy"></p><h3>Final Thoughts</h3><p>I think thats all we will add for now! Eventually I might add in some more tools at our disposal, like netlify dev, or setting up scaffolding for serverless functions. For now though, we will turn this into a template repository by going into our github repo &gt; settings &gt; and checking "Template repository" under the repo name. Now we can quickly hit 'Use this template' to create a new repo with our new Eleventy Kit!</p><p><img src="/images/eleventykit/template.png" alt="/images/eleventykit/template.png" loading="lazy"></p></article></div></section></main><script>function darkMode () {
+            return {
+                isDarkModeEnabled: false,
+                init: function () {
+                    console.log('Alpine ready to roll...')
+
+                    // Watch for dark mode changing and update local storage
+                    this.$watch('isDarkModeEnabled', (newValue) => {
+                        console.log(`Setting dark mode in local storage to ${newValue}...`)
+                        localStorage.setItem('isDarkModeEnabled', newValue)
+                    })
+
+                    // Initially grab local storage and set if local storage key is present
+                    if (localStorage.getItem('isDarkModeEnabled')) {
+                        this.isDarkModeEnabled = JSON.parse(localStorage.getItem('isDarkModeEnabled'))
+                    }
+                },
+                toggleDarkMode: function () {
+                    this.isDarkModeEnabled = !this.isDarkModeEnabled
+                }
+            }
+        }</script><script src="/alpine.js?v=1635015516843"></script><script src="/prism.min.js"></script></body></html>

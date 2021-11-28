@@ -1,0 +1,79 @@
+site_url: https://www.garrettbland.com
+display_url: https://www.garrettbland.com
+show_preview_links: false
+cms_manual_init: true
+backend:
+    name: git-gateway
+    repo: garrettbland/garrettbland.com
+    branch: master
+media_folder: public/uploads
+public_folder: uploads
+collections:
+    # Blog Posts
+    - label: 'Posts'
+      name: 'posts'
+      folder: 'cms/posts'
+      create: true
+      slug: '{{slug}}'
+      fields:
+          - {
+                label: 'Active',
+                name: 'active',
+                widget: 'boolean',
+                required: true,
+                default: true,
+            }
+          - {
+                label: 'Title',
+                name: 'title',
+                widget: 'string',
+                required: true,
+            }
+          - {
+                label: 'Published',
+                name: 'published',
+                widget: 'datetime',
+                required: true,
+                date_format: 'YYYY-MM-DD',
+                time_format: false,
+                format: 'YYYY-MM-DD',
+                picker_utc: false,
+            }
+          - {
+                label: 'Category',
+                name: 'category',
+                widget: 'select',
+                options: ['general', '12-startups'],
+            }
+          - {
+                label: 'Body',
+                name: 'body',
+                widget: 'markdown',
+                required: true,
+            }
+    # Projects
+    - label: 'Projects'
+      name: 'projects'
+      folder: 'cms/projects'
+      create: true
+      slug: '{{slug}}'
+      fields:
+          - {
+                label: 'Active',
+                name: 'active',
+                widget: 'boolean',
+                required: true,
+                default: true,
+            }
+          - {
+                label: 'Title',
+                name: 'title',
+                widget: 'string',
+                required: true,
+            }
+          - {
+                label: 'Body',
+                name: 'body',
+                widget: 'markdown',
+                required: true,
+            }

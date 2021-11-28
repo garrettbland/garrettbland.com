@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Content Manager</title>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Include the script that builds the page and powers Netlify CMS -->
+        <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+
+        <!-- Add event listener for adding slug as id automatically -->
+        <script>
+            window.CMS.registerPreviewStyle("https://www.garrettbland.com/style.css");
+            window.CMS.registerEventListener({
+                name: 'preSave',
+                handler: ({ entry }) => {
+                    if (entry.get('id')) {
+                        return entry.get('data').set('id', entry.get('id'));
+                    } else {
+                        // you can use any relevant field/logic for generating the initial slug
+                        const titleSlug = entry.getIn(['data', 'title'], '').toLowerCase().replace(/[']/g, '').replace(/[.]/g, '-').replace(/[\s]/g, '-')
+                        return entry.get('data').set('id', titleSlug);
+                    }
+                },
+            });
+
+            setTimeout(function () {
+                var preview_frame = document.getElementById('preview-pane')
+                preview_frame.contentWindow.document.body.className += ' prose prose-lg'
+            }, 5000)
+        </script>
+
+
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html>
+    </body>
+</html> 
+    </body>
+</html>

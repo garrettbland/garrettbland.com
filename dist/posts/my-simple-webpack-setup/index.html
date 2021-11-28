@@ -1,0 +1,50 @@
+<html lang="en-us"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta httpequiv="Content-Type" content="text/html; charset=utf-8"><meta name="language" content="English"><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width,initial-scale=1"><title>My Simple Webpack Setup</title><meta name="description" content=""><meta property="og:title" content="My Simple Webpack Setup"><meta property="og:site_name" content="My Simple Webpack Setup"><meta property="og:url" content=""><meta property="og:description" content=""><meta property="og:type" content="website"><link rel="shortcut icon" type="image/ico" href="/favicon.ico"><link rel="stylesheet" href="/style.css?v=1635015516843"></head><body x-data="darkMode" class="transition-all" x-bind:class="isDarkModeEnabled ? 'dark bg-blueGray-900' : 'bg-gray-50'"><main class="mb-24"><nav class="max-w-xl mx-auto px-4"><div class="flex justify-between items-center py-4"><a class="font-lexa relative z-20 text-xl dark:text-white font-semibold hover:underline" href="/">Garrett Bland</a><div class="flex items-center flex-row space-x-2"><button class="transform ease-in-out duration-150 hover:scale-110 origin-center p-1 hover:bg-gray-100 dark:hover:bg-blue-900 rounded-lg" x-on:click="toggleDarkMode()"><div class="relative w-8 h-8"><svg class="h-8 w-8 p-1 text-gray-700 hover:text-gray-700 dark:text-blue-50 absolute top-0 left-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="isDarkModeEnabled" x-transition.opacity="" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg> <svg class="h-8 w-8 p-1 text-gray-700 absolute top-0 left-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="!isDarkModeEnabled" x-transition.opacity="" xmlns="http://www.w3.org/2000/svg"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></div></button> <a class="transform ease-in-out duration-150 hover:scale-110 origin-center p-1 hover:bg-gray-100 dark:hover:bg-blue-900 rounded-lg" href="https://github.com/garrettbland" rel="noreferrer" target="_blank"><img alt="github-logo" class="w-8 h-8" src="/images/github.png" loading="lazy"> </a><a class="transform ease-in-out duration-150 hover:scale-110 origin-center p-1 hover:bg-gray-100 dark:hover:bg-blue-900 rounded-lg" href="https://twitter.com/gbland777" rel="noreferrer" target="_blank"><img alt="twitter-logo" class="w-8 h-8" src="/images/twitter.png" loading="lazy"></a></div></div><div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-6 dark:via-indigo-700"></div></nav><section><div><article class="prose prose-lg dark:prose-dark"><h1 class="leading-loose">My Simple Webpack Setup</h1><p class="flex flex-row items-center"><span class="mr-2"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> </span>Posted on <time class="ml-1" datetime="2020-06-04 19:00">Jun 04, 2020</time></p><p>When I started really getting into javascript and adding more functionality to my sites, something I really struggled with, was webpack. Below I have outlined my simple webpack setup, and hopefully this can help you.</p><p>[https://github.com/garrettbland/simple-webpack-setup](Github Repo)</p><h3>What is webpack?</h3><p>Webpack gives us control over how we want to handle different files. Most commonly, javascript. We can import many different npm libraries, and webpack will build and minify into a single javascript file during build. This helps us reduce external requests and lets our code be nice and tidy. I also prefer webpack to separate my css styling into a separate file as well.</p><h3>Lets run through a simple project</h3><p>I struggled like crazy when I got started with webpack, even for simple setups. I'm going to walk through everything from the beginning. I'm writing this tutorial on a mac, so the commands will be slightly different for windows. I'm using node v12.14.0 &amp;&amp; npm v6.13.4.</p><h3>Step 1</h3><p>Create a new directory for our project and jump into it.</p><pre><code class="language-bash">mkdir webpack-test-project &amp;&amp; cd webpack-test-project
+</code></pre><h3>Step 2</h3><p>Initialize a new <code>package.json</code>, and answer yes to everything just to get going quickly or add <code>-y</code> to the command and answer yes to everything. (leave it off if you prefer to manually fill it out)</p><pre><code class="language-bash">npm init -y
+</code></pre><h3>Step 3</h3><p>Install webpack and the webpack-cli. We use the cli to tell webpack to fire off different scripts and builds.</p><pre><code class="language-bash">npm install webpack webpack-cli
+</code></pre><h3>Step 4</h3><p>Create a new file called <code>webpack.config.js</code> in our new directory. This is the configuration file where we can customize webpack to our liking.</p><pre><code class="language-bash">touch webpack.config.js
+</code></pre><h3>Quick check ✅</h3><p>At this point we should have one folder, and three files in our new directory.</p><ul><li>node_modules</li><li>package.json</li><li>package-lock.json</li><li>webpack.config.json</li></ul><h3>Step 5</h3><p>Lets create a new starting point for our application. Create a file called <code>app.js</code></p><pre><code class="language-bash">touch app.js
+</code></pre><h3>Step 6</h3><p>Open <code>app.js</code> and add the following or something similar. This will be used so we can see that our webpack build is bundling our javascript.</p><pre><code class="language-javascript">window.alert('Webpack is working!')
+</code></pre><h3>Step 7</h3><p>Open up <code>webpack.config.js</code>, and add this very simple config below. There are a few different things going on here. We tell webpack the entry file is <code>app.js</code>. Once webpack if finished building, we tell it to create a file called <code>main.js</code> and add it to the <code>build</code> directory. Then we can reference <code>build/main.js</code> in our html.</p><pre><code class="language-javascript">const path = require('path')
+
+module.exports = {
+    entry: path.resolve(__dirname, 'app.js'),
+    output: {
+        path: path.resolve(__dirname, 'build'),
+        filename: 'main.js',
+    },
+}
+</code></pre><h3>Step 8</h3><p>Update our <code>package.json</code> file and add in our new webpack build command under scripts. The <code>—mode</code> flag is used here for demonstration purposes.</p><pre><code class="language-json">"build": "webpack --mode development"
+</code></pre><h3>Step 9</h3><p>Lets give it a whirl! Run your new build npm script. You will see various details that webpack generates like bundle size and time it took.</p><pre><code class="language-bash">npm run build
+</code></pre><h3>Step 10</h3><p>Lets add to a simple html file and watch your hard work come to life. Create a <code>index.html</code> file in the <code>build</code> directory</p><pre><code class="language-bash">touch build/index.html
+</code></pre><h3>Step 11</h3><p>Add in the following html to the new <code>index.html</code> file</p><pre><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Test webpack&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Test webpack demo&lt;/p&gt;
+        &lt;!-- reference our new main.js file webpack built --&gt;
+        &lt;script src="main.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3>Final Step</h3><p>Open up <code>index.html</code> in your favorite web browser. Right away you will notice that an alert fires, and thats an easy way for us to know that webpack is working! 🎉 I hope this was easy to follow along with and has helped you better understand webpack and how it works on a basic level.</p></article></div></section></main><script>function darkMode () {
+            return {
+                isDarkModeEnabled: false,
+                init: function () {
+                    console.log('Alpine ready to roll...')
+
+                    // Watch for dark mode changing and update local storage
+                    this.$watch('isDarkModeEnabled', (newValue) => {
+                        console.log(`Setting dark mode in local storage to ${newValue}...`)
+                        localStorage.setItem('isDarkModeEnabled', newValue)
+                    })
+
+                    // Initially grab local storage and set if local storage key is present
+                    if (localStorage.getItem('isDarkModeEnabled')) {
+                        this.isDarkModeEnabled = JSON.parse(localStorage.getItem('isDarkModeEnabled'))
+                    }
+                },
+                toggleDarkMode: function () {
+                    this.isDarkModeEnabled = !this.isDarkModeEnabled
+                }
+            }
+        }</script><script src="/alpine.js?v=1635015516843"></script><script src="/prism.min.js"></script></body></html>
