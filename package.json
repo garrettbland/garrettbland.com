@@ -30,7 +30,7 @@
         "gray-matter": "^4.0.3",
         "html-minifier": "^4.0.0",
         "jsdom": "^16.6.0",
-        "markdown-it": "^10.0.0",
+        "markdown-it": "^12.3.2",
         "prettier": "^2.3.1",
         "rimraf": "^3.0.2",
         "tailwindcss": "^2.2.0"
