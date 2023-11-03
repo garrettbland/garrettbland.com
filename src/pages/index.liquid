@@ -41,7 +41,7 @@ description: 'Im Garrett Bland, a Lead Senior React Developer with Ally Bank.'
         </h3>
         <ul>
             <li>
-                <a href="/post/understanding-javascripts-event-loop-and-call-stack" class="block">
+                <a href="/projects/understanding-javascripts-event-loop-and-call-stack" class="block">
                     Understanding Javascript's Event Loop and Call Stack
                 </a>
                 <span class="text-sm">ThunderPlains 2023 | Oklahoma City, OK</span>
@@ -60,11 +60,13 @@ description: 'Im Garrett Bland, a Lead Senior React Developer with Ally Bank.'
         </h3>
         <ul>
             {% for project in projects %}
-                <li>
-                    <a href="/projects/{{ project.data.title | slug }}">
-                        {{ project.data.title }}
-                    </a>
-                </li>
+                {% if project.data.title != "Understanding Javascript's Event Loop and Call Stack" %}
+                    <li>
+                        <a href="/projects/{{ project.data.title | slug }}">
+                            {{ project.data.title }}
+                        </a>
+                    </li>
+                {% endif %}
             {% endfor %}
         </ul>
     </div>

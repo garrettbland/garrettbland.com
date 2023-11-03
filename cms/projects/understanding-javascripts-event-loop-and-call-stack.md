@@ -1,6 +1,6 @@
 ---
 active: true
-title: Understanding Javascript's Event Loop and Call Stack
+title: Understanding Javascripts Event Loop and Call Stack
 published: 2023-11-02
 ---
 
