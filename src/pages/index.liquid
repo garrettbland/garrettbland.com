@@ -12,21 +12,46 @@ description: 'Im Garrett Bland, a Lead Senior React Developer with Ally Bank.'
         </div>
         <h1>Hello! 👋</h1>
         <p>
-            I'm Garrett Bland, a Lead Senior React Developer with
+            I'm Garrett Bland, a Lead Principal Javascipt Engineer with
             <a class="text-blue-600 hover:underline" href="https://www.ally.com/" rel="noreferrer" target="_blank">
-                Ally Bank
-            </a>. I develop heavily in React & Typescript, as well as lead a UI team that deploys awesome products.
+                Ally Bank</a>. I develop heavily in React & Typescript, as well as lead a UI team that delivers awesome products 
+            across multiple lines of business in the financial industry. We focus primarily on web and mobile projects
+            using React and React Native.
         </p>
         <p>
             I'm an inspiring entreprenuer and love jumping into new things and learning.
-            I've created a handful of projects and am currently working on a few new ones, and write
-            about development from time to time.
+            I've created a handful of projects using various technologies, and always try
+            to do uncomfortable things to help grow as a developer and a human.
+        </p>
+        <p>
+            Lately I've been getting my hands messy with the new OpenAI technology, 
+            decentralized authentication with web3, and have been doing a lot more
+            Swift. (The Swift bit is for getting back into mobile development 👀)
         </p>
     </div>
 </section>
 <!-- End Intro -->
 
-<!-- Projects & Packages -->
+<!-- Talks -->
+<section>
+    <div class="prose dark:prose-dark">
+        <h3 class="flex items-center space-x-4">
+            <span class="text-3xl mr-2">🎙️</span>
+            Talks
+        </h3>
+        <ul>
+            <li>
+                <a href="/post/understanding-javascripts-event-loop-and-call-stack" class="block">
+                    Understanding Javascript's Event Loop and Call Stack
+                </a>
+                <span class="text-sm">ThunderPlains 2023 | Oklahoma City, OK</span>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- End Projects & Packages -->
+
+<!-- Projects -->
 <section>
     <div class="prose dark:prose-dark">
         <h3 class="flex items-center space-x-4">
@@ -46,24 +71,38 @@ description: 'Im Garrett Bland, a Lead Senior React Developer with Ally Bank.'
 </section>
 <!-- End Projects & Packages -->
 
-<!-- Blog Posts -->
+<!-- Packages -->
 <section>
     <div class="prose dark:prose-dark">
         <h3 class="flex items-center space-x-4">
-            <span class="text-3xl mr-2">📝</span>Blog Posts
+            <img src="/images/npm.png" alt="NPM logo" class="w-[30px] mr-3" style="margin-top: 0px; margin-bottom: 0px;"/>
+            Packages
         </h3>
         <ul>
-            {% for post in posts %}
-                <li>
-                    <a href="/posts/{{ post.data.title | slug }}">
-                        {{ post.data.title }}
-                    </a>
-                </li>
-            {% endfor %}
+            <li>
+                <a href="https://www.npmjs.com/package/use-page-offset" target="_blank">
+                    use-page-offset
+                </a>
+            </li>
+            <li>
+                <a href="https://www.npmjs.com/package/@garrettbland/img-alt-tag-check" target="_blank">
+                    @garrettbland/img-alt-tag-check
+                </a>
+            </li>
+            <li>
+                <a href="https://www.npmjs.com/package/@garrettbland/lazy-load-images" target="_blank">
+                    @garrettbland/lazy-load-images
+                </a>
+            </li>
+            <li>
+                <a href="https://www.npmjs.com/package/vue-google-ad-manager" target="_blank">
+                    vue-google-ad-manager
+                </a>
+            </li>
         </ul>
     </div>
 </section>
-<!-- End Blog Posts -->
+<!-- End Projects & Packages -->
 
 <!-- About this site -->
 <section>
@@ -82,15 +121,10 @@ description: 'Im Garrett Bland, a Lead Senior React Developer with Ally Bank.'
             <a href="https://tailwindcss.com/" rel="noreferrer" target="_blank">
                 Tailwind CSS.
             </a>
-            The javascript used on this site is the amazing
+             The javascript used on this site is the amazing
             <a href="https://alpinejs.dev/" rel="noreferrer" target="_blank">
                 Alpine JS.
             </a>
-        </p>
-        <p>
-            I write my blog posts & projects using
-            <a href="https://www.netlifycms.org/" rel="noreferrer" target="_blank">Netlify CMS</a>
-            and store everything in github.
         </p>
     </div>
 </section>

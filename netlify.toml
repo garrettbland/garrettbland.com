@@ -2,3 +2,9 @@
   publish = "dist"
   command = "npm run build"
   skip_processing = true
+
+[[redirects]]
+from = "/thunderplains"
+to = "projects/understanding-javascript's-event-loop-and-call-stack/"
+status = 200
+force = true

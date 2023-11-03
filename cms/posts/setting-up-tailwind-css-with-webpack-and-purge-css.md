@@ -1,10 +1,11 @@
 ---
-active: true
+active: false
 title: Setting up Tailwind CSS with Webpack and Purge CSS
 published: 2020-06-21
 category: general
 id: setting-up-tailwind-css-with-webpack-and-purge-css
 ---
+
 A few years ago when I found out about this css utility called [Tailwind CSS](https://tailwindcss.com/), I was absolutely blown away with how much time it saved me and how quickly it made me wire up websites with CSS. It made designing fun again.
 
 Whenever I get started with a new javascript project, Tailwind is my absolute go to now. With their built in purge and tree shake to remove unused classes, combined with Post CSS, its a beast. I often found myself annoyed trying to get it worked into my build pipeline, so here is my process.

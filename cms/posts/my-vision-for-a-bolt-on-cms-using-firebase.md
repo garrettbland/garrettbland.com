@@ -1,10 +1,11 @@
 ---
-active: true
+active: false
 title: My vision for a bolt-on CMS using Firebase
 published: 2021-07-01
 category: general
 id: my-vision-for-a-bolt-on-cms-using-firebase
 ---
+
 Another content management system - _I know_. There are thousands of content management systems out there in the world. I want to build something where I can install to any react project, plug in my [Firebase](https://firebase.google.com/) config, and easily customize a dashboard for a client to edit their data.
 
 ### What about Headless CMS's or Wordpress?
