@@ -5,6 +5,6 @@
 
 [[redirects]]
   from = "/thunderplains"
-  to = "/projects/understanding-javascript's-event-loop-and-call-stack"
+  to = "/projects/understanding-javascripts-event-loop-and-call-stack"
   status = 301
   force = true
