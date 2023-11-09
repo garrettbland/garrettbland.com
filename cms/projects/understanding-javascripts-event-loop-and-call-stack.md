@@ -20,16 +20,9 @@ published: 2023-11-02
 
 Here are all of the links to the examples demo'd during my talk. Each sandbox has a corrosponding `README.md` file that explains details.
 
--   [Slide 3](simple coffee example)
--   [Slide 7](synchronous example)
--   [Slide 8](asynchronous example)
--   [Slide 11](simple call stack)
--   [Slide 13](stack overflow)
--   [Slide 18](callback example)
--   [Slide 19](simple task queue)
--   [Slide 22](simple task queue beginning with set timeout)
--   [Slide 23](task queue with multiple items)
--   [Slide 30](micro queue example)
+-   [Call Stack Example](https://playcode.io/1657362?v=2)
+-   [Task Queue Example](https://playcode.io/1657362?v=3)
+-   [Micro Task Queue Example](https://playcode.io/1657362?v=4)
 
 ### Presentation Materials 📚
 
