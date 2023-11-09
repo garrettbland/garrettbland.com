@@ -1,10 +1,11 @@
 ---
-active: true
+active: false
 title: Moving my site to Next.js
 published: 2021-01-12
 category: general
 id: moving-my-site-to-next-js
 ---
+
 Edit: This isn't the case anymore - I went back to 11ty
 
 Currently, my site is powered by [Eleventy](https://www.11ty.dev/), which is a very very cool static site generator. I actually made an eleventy github template ([Eleventy Kit](https://eleventykit.netlify.app/)) that I use frequently for work projects.
@@ -17,13 +18,13 @@ Originally I had built my site with Eleventy and a custom webpack config so I co
 
 ### New branch time
 
-Anytime I go through a large overhaul (in my mind) I like to create a new branch. Just incase I mess things up *horribly*, I can always nuke it and start over. I'm elegantly calling my new branch `nextjs`. Now I'll throw everything in the current directory (except for the git stuff & package.json), into a new directory named `_old`.
+Anytime I go through a large overhaul (in my mind) I like to create a new branch. Just incase I mess things up _horribly_, I can always nuke it and start over. I'm elegantly calling my new branch `nextjs`. Now I'll throw everything in the current directory (except for the git stuff & package.json), into a new directory named `_old`.
 
 ### Setting up Next
 
 Now I have a fresh empty repo, I'm going to uninstall all packages from my `package.json`. Definitely not needed, but it just works cleaner in my mind that way. I also know that I will have different scripts I will be runnings with Next, so I'll remove all of those as well.
 
-*Next* up is actually installing Next (😃 get it). I'll just follow their setup instructions to manually install. I'll also follow their instructions to setup the proper script and to create a `tsconfig.json` file, so I can use [Typescript](https://www.typescriptlang.org/).
+_Next_ up is actually installing Next (😃 get it). I'll just follow their setup instructions to manually install. I'll also follow their instructions to setup the proper script and to create a `tsconfig.json` file, so I can use [Typescript](https://www.typescriptlang.org/).
 
 ### Installing dependencies
 

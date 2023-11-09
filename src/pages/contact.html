@@ -1,0 +1,119 @@
+---
+title: 'Garrett Bland'
+description: 'Contact Me | Garrett Bland'
+---
+
+<section>
+    <div class="prose dark:prose-dark">
+        <h1>Contact Me 📨</h1>
+        <p>
+            Have some questions? Want to get in touch with me? Fill
+            out the form below and I'll do my best to respond as soon
+            as I can. If you would rather text, make sure to leave a
+            phone number.
+        </p>
+        <form name="contact" class="space-y-3" method="POST" netlify>
+            <div>
+                <div>
+                    <label>Name</label>
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        name="name"
+                        required
+                        class="
+                            rounded-md
+                            border-2 border-gray-300
+                            focus:border-blue-500
+                            px-4
+                            py-2
+                            w-full
+                            focus:outline-none
+                            dark:text-black
+                        "
+                    />
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>Email</label>
+                </div>
+                <div>
+                    <input
+                        type="email"
+                        required
+                        name="email"
+                        class="
+                            rounded-md
+                            border-2 border-gray-300
+                            focus:border-blue-500
+                            px-4
+                            py-2
+                            w-full
+                            focus:outline-none
+                            dark:text-black
+                        "
+                    />
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>Phone</label>
+                </div>
+                <div>
+                    <input
+                        type="tel"
+                        name="phone"
+                        class="
+                            rounded-md
+                            border-2 border-gray-300
+                            focus:border-blue-500
+                            px-4
+                            py-2
+                            w-full
+                            focus:outline-none
+                            dark:text-black
+                        "
+                    />
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>Message</label>
+                </div>
+                <div>
+                    <textarea
+                        required
+                        name="message"
+                        rows="6"
+                        class="
+                            rounded-md
+                            border-2 border-gray-300
+                            focus:border-blue-500
+                            p-4
+                            w-full
+                            focus:outline-none
+                            dark:text-black
+                        "
+                    ></textarea>
+                </div>
+            </div>
+            <div class="h-3"></div>
+            <button
+                type="submit"
+                class="
+                    py-2
+                    px-8
+                    bg-blue-600
+                    hover:bg-blue-700
+                    rounded-md
+                    text-white
+                    font-semibold
+                "
+            >
+                Submit
+            </button>
+        </form>
+    </div>
+</section>

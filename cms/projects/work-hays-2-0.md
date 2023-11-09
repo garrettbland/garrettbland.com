@@ -1,17 +1,18 @@
 ---
-active: true
+active: false
 title: Work Hays 2.0
 id: work-hays-2-0
 ---
+
 About a year and half ago, I rebuilt and took over this local job postings website in Node, Express, and TailwindCSS. Fast forward to now, and there are a lot of things I wish I would have done differently, so I am currently in progress of building version 2.0 of [Work Hays](https://workhays.com/). [Click here](https://www.garrettbland.com/projects/work-hays/) to read about the original rebuild.
 
 ## So version 2.0
 
 For version 2.0, there are some big things I want to change. Here are my big goals for the update.
 
-* Totally serverless (move to a hybrid static/serverless model)
-* Move to Firestore from MySQL
-* Migrate Authentication to a third party provider
+-   Totally serverless (move to a hybrid static/serverless model)
+-   Move to Firestore from MySQL
+-   Migrate Authentication to a third party provider
 
 ### Going Serverless
 

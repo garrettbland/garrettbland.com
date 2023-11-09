@@ -3,7 +3,8 @@ active: true
 title: Block Builder
 id: block-builder
 ---
-Pubic Beta - [blockbuilder.app](https://blockbuilder.app/)
+
+Pubic Beta - [blockbuilder.netlify.app](https://blockbuilder.netlify.app/)
 
 Github repo - <https://github.com/garrettbland/blockbuilder>
 
@@ -36,3 +37,5 @@ let blocks = [
     },
 ]
 ```
+
+There is a lot more to add here, but please, go check out the demo at [blockbuilder.netlify.app](https://blockbuilder.netlify.app/) and click around and see what you can make.

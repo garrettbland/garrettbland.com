@@ -3,11 +3,16 @@ active: true
 title: Bunny Runner
 id: bunny-runner
 ---
-[https://www.facebook.com/BunnyRunnerApp](https://www.facebook.com/BunnyRunnerApp)
+
+[https://github.com/garrettbland/bunny-runner-v1](https://github.com/garrettbland/bunny-runner-v1)
+
+![Bunny Runner](/images/bunny-runner/bunny-runner.png)
 
 ### What is Bunny Runner?
 
 Bunny Runner was a mobile iOS game that I developed. It was a platforming game that challenged players to tap and hop on moving platforms. It was inspired by chromes dinosaur game, and Flappy Birds.
+
+![Bunny Runner Game Menu](/images/bunny-runner/BunnyRunner_portrait.png)
 
 ### Why did I make it?
 
@@ -23,6 +28,8 @@ I used a few different tools to create Bunny Runner.
 -   Sprite Kit (Apples game engine at the time)
 -   [https://www.piskelapp.com/](https://www.piskelapp.com/)
 
+![Bunny Runner In Game](/images/bunny-runner/BunnyRunner2_portrait.png)
+
 ### What did I learn?
 
 This was my very first app I submitted to the iOS store. I learned a lot about the entire publishing process, all of the design work that goes into a game, all of the physics, and a lot about programming in Swift.
@@ -35,6 +42,10 @@ I learned a lot about Sprite Kit, Apples iOS game engine. It took a lot of trial
 
 It was a lot of fun to work on and show my friends and family progress as I built it. I pretty much shoved it down all my friends throats that had an iPhone. There was also a pridefully moment I had when I was hanging out with a group of friends, and Bunny Runner was brought up. We were all playing this game on our phones seeing who could get the highest score.
 
+![Bunny Runner Beginning of Game](/images/bunny-runner/BunnyRunner3_portrait.png)
+
 ### Any plans for the future?
 
-Not currently. I've tossed the idea around in my head, the challenge was fun and rewarding. If I was going to dive into game development again I would head towards Unity or Unreal Engine and make something a little more in depth.
+Not currently. I've tossed the idea around in my head, the challenge was fun and rewarding. If I was going to dive into game development again I would head towards Unity or Unreal Engine and make something a little more in depth possibly.
+
+The idea of using Swift and SceneKit is also appealing. Make it more 3d and explore game development as a whole again.
