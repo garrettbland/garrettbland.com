@@ -1,9 +1,9 @@
 ---
 active: true
-title: Day 1 - 100 Days of Swift
-published: 2023-11-13
+title: Day 2 - 100 Days of Swift
+published: 2023-11-14
 category: swift
-id: day-1-100-days-of-swift
+id: day-2-100-days-of-swift
 ---
 
 Day `2/100` of 100 days of swift challenge.
