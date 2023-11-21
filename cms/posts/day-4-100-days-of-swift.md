@@ -87,3 +87,9 @@ var array2 = ["more", "stuff"]
 var combined = array1 + array2
 print(combined)
 ```
+
+### Random Additional Stuff
+
+Also learned about Swift and passing arguments as reference type vs value type. In functions, Swift will pass arguments by value type (as a const, so we have to create a new variable inside the function to manipulate). You can pass things by reference type, and those are things like classes.
+
+Seems really dangerous to pass things around by reference type as it is in Javascript. There are things you can do in Swift like using the `inout` operator to work with some of these challenges, and I'm sure I'll learn more.
