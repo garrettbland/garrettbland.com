@@ -3,7 +3,7 @@ active: true
 title: Day 7 - 100 Days of Swift
 published: 2023-11-27
 category: swift
-id: day-6-100-days-of-swift
+id: day-7-100-days-of-swift
 ---
 
 Day `7/100` of 100 days of swift challenge.

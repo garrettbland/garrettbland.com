@@ -125,7 +125,7 @@ outerLoop: for option1 in items {
 }
 ```
 
-### Checkpoint 3
+### Challenge (Checkpoint 3)
 
 Checkpoint 3 is asking us to solve the fizzbuzz problem
 
