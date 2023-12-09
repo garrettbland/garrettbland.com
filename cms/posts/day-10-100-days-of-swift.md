@@ -121,6 +121,9 @@ struct Employee {
     var vacationDays = 14
     var vacationDaysTaken = 0
 
+    // Computed property, calculates each time it's accessed
+    // By default, a computed property is default only. You can add your own "get" and "set"
+    // if you want
     var vacationDaysRemaining: Int {
         vacationDays - vacationDaysTaken
     }
