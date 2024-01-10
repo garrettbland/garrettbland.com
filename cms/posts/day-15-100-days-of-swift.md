@@ -1,7 +1,7 @@
 ---
 active: true
 title: Day 15 - 100 Days of Swift
-published: 2024-01-06
+published: 2024-01-07
 category: swift
 id: day-15-100-days-of-swift
 ---
